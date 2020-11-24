@@ -1,14 +1,21 @@
 import React from 'react';
 import './App.css';
+import AboutUsScreen from './screens/AboutUsScreen';
+import { Route, BrowserRouter } from 'react-router-dom';
+
 
 
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
-      <img src="../public/images/homeless_bargraph.png"></img>
+    
+      <Route path="/" component={AboutUsScreen}></Route>
+      
       
     </div>
+    </BrowserRouter>
   );
 }
 
