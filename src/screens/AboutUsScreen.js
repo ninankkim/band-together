@@ -5,12 +5,16 @@ import { Card, CardActionArea, CardMedia, CardContent, Typography, CardActions, 
 const useStyles = makeStyles({
     root: {
         maxWidth: 327,
+        minWidth: 150,
         margin: "20px",
+        maxHeight: 550,
+        
         
 
     },
     media: {
-        height: 240,
+        
+        height: 222,
     },
 });
 
@@ -20,9 +24,12 @@ export default function AboutUsScreen() {
     const classes = useStyles();
     return (
         <>
-        <div className="logo">
-        <img src="/images/widelogo.gif" alt="gif"></img>
+        <div>
+        <img className="logo" src="/images/biglogo.gif" alt="gif"></img>
         </div>
+        <p className="intro"> While homelessness has not made any significant changes <br /> for the worse, 
+                        it has yet to make any significant changes for the better. <br />At Band 
+                        Together, we believe postive change is possible.</p>
         <div className="component-container">
             <Card className={classes.root}>
                 <CardActionArea>
@@ -59,9 +66,7 @@ export default function AboutUsScreen() {
                             Homeless Population Through the Years
                         </Typography>
                         <Typography variant="body2" color="textSecondary" component="p">
-                        While homelessness has not made any significant changes for the worse, 
-                        it has yet to make any significant changes for the better. At Band 
-                        Together, we believe postive change is possible.
+
         </Typography>
 
                     </CardContent>

@@ -3,7 +3,7 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
-  background-color: #dfba2d;
+  background-color: white;
 
 }
 
@@ -11,6 +11,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  min-width: 50px;
 }
 
 .about-image {
@@ -37,5 +38,9 @@ body {
 
 .nav-bar {
   background-color: #dfba2d;
+}
+
+.logo {
+  width: 100vw;
 }
 
