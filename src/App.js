@@ -1,14 +1,11 @@
 import React from 'react';
 import './index.css';
 import AboutUsScreen from './screens/AboutUsScreen';
+import AddResourcesScreen from './screens/AddResourcesScreen';
 import FindResourcesScreen from './screens/FindResourcesScreen';
-import SeekHelpScreen from './screens/SeekHelpScreen';
 import ContributorsScreen from './screens/ContributorsScreen';
-
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
-
 import Drawer from '@material-ui/core/Drawer';
-
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -17,16 +14,10 @@ import ListItemText from '@material-ui/core/ListItemText';
 import HomeIcon from '@material-ui/icons/Home';
 import HomeWorkIcon from '@material-ui/icons/HomeWork';
 import PeopleIcon from '@material-ui/icons/People';
-
-
 function App() {
   return (
-
     <BrowserRouter>
       <div className="App">
-
-
-
         <Drawer
           variant="permanent"
           open={true}
@@ -44,7 +35,7 @@ function App() {
                 )
               } else if (text === 'Add Resources') {
                 return (
-                  <Link to="/resources">
+                  <Link to="/addresources">
                   <ListItem button key={text}>
                     <ListItemIcon><HomeWorkIcon /></ListItemIcon>
                     <ListItemText primary={text} />
@@ -53,7 +44,7 @@ function App() {
                 )
               } else if (text === 'Find Resources') {
                 return (
-                  <Link to="/shelter">
+                  <Link to="/findresources">
                   <ListItem button key={text}>
                     <ListItemIcon><HomeIcon /></ListItemIcon>
                     <ListItemText primary={text} />
@@ -75,13 +66,12 @@ function App() {
         </Drawer>
         <Switch>
           <Route exact path="/" component={AboutUsScreen} ></Route>
-          <Route path="/resources" component={FindResourcesScreen}></Route>
-          <Route path="/shelter" component={SeekHelpScreen}></Route>
+          <Route path="/addresources" component={AddResourcesScreen}></Route>
+          <Route path="/findresources" component={FindResourcesScreen}></Route>
           <Route path="/contributors" component={ContributorsScreen}></Route>
         </Switch>
       </div>
     </BrowserRouter>
   );
 }
-
 export default App;
