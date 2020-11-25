@@ -1,10 +1,7 @@
 import React from 'react';
 import './index.css';
 import AboutUsScreen from './screens/AboutUsScreen';
-import { BrowserRouter, Route} from 'react-router-dom';
-import Divider from '@material-ui/core/Divider';
-import Drawer from '@material-ui/core/Drawer';
-import SeekDonationScreen from './screens/SeekDonationScreen';
+import FindResourcesScreen from './screens/FindResourcesScreen';
 import SeekHelpScreen from './screens/SeekHelpScreen';
 import ContributorsScreen from './screens/ContributorsScreen';
 
@@ -35,7 +32,7 @@ function App() {
           open={true}
           anchor="left">
           <List className="nav-bar">
-            {['Home', 'Add Shelter', 'Find Shelter', 'Contributors'].map((text, index) => {
+            {['Home', 'Add Resources', 'Find Resources', 'Contributors'].map((text, index) => {
               if (text === 'Home') {
                 return (
                   <Link to="/">
@@ -45,18 +42,18 @@ function App() {
                     </ListItem>
                   </Link>
                 )
-              } else if (text === 'Add Shelter') {
+              } else if (text === 'Add Resources') {
                 return (
-                  <Link to="/donation">
+                  <Link to="/resources">
                   <ListItem button key={text}>
                     <ListItemIcon><HomeWorkIcon /></ListItemIcon>
                     <ListItemText primary={text} />
                   </ListItem>
                   </Link>
                 )
-              } else if (text === 'Find Shelter') {
+              } else if (text === 'Find Resources') {
                 return (
-                  <Link to="/help">
+                  <Link to="/shelter">
                   <ListItem button key={text}>
                     <ListItemIcon><HomeIcon /></ListItemIcon>
                     <ListItemText primary={text} />
@@ -78,8 +75,8 @@ function App() {
         </Drawer>
         <Switch>
           <Route exact path="/" component={AboutUsScreen} ></Route>
-          <Route path="/donation" component={SeekDonationScreen}></Route>
-          <Route path="/help" component={SeekHelpScreen}></Route>
+          <Route path="/resources" component={FindResourcesScreen}></Route>
+          <Route path="/shelter" component={SeekHelpScreen}></Route>
           <Route path="/contributors" component={ContributorsScreen}></Route>
         </Switch>
       </div>
