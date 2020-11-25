@@ -5,11 +5,8 @@ import AboutUsScreen from './screens/AboutUsScreen';
 import AddResourcesScreen from './screens/AddResourcesScreen';
 import FindResourcesScreen from './screens/FindResourcesScreen';
 import ContributorsScreen from './screens/ContributorsScreen';
-
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
-
 import Drawer from '@material-ui/core/Drawer';
-
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -125,5 +122,4 @@ const useStyles = makeStyles({
     </BrowserRouter>
   );
 }
-
 export default App;
