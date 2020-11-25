@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { FormControl, FormLabel, FormControlLabel, Radio, RadioGroup } from '@material-ui/core'
 
 
-export default function SeekHelpScreen() {
+export default function AddResourcesScreen() {
     const [value, changeValue] = useState('')
 
     const handleChange = () => {
