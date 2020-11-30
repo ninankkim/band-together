@@ -1,7 +1,5 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class FoodPantry extends Model {
     /**
@@ -12,16 +10,19 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
     }
-  };
-  FoodPantry.init({
-    name: DataTypes.TEXT,
-    address: DataTypes.TEXT,
-    phoneNumber: DataTypes.STRING,
-    hours: DataTypes.STRING,
-    churchAffiliated: DataTypes.BOOLEAN
-  }, {
-    sequelize,
-    modelName: 'FoodPantry',
-  });
+  }
+  FoodPantry.init(
+    {
+      name: DataTypes.TEXT,
+      address: DataTypes.TEXT,
+      phoneNumber: DataTypes.STRING,
+      hours: DataTypes.STRING,
+      church_affiliated: DataTypes.BOOLEAN,
+    },
+    {
+      sequelize,
+      modelName: 'FoodPantry',
+    }
+  );
   return FoodPantry;
 };

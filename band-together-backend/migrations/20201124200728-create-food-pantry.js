@@ -6,34 +6,34 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       name: {
-        type: Sequelize.TEXT
+        type: Sequelize.TEXT,
       },
       address: {
-        type: Sequelize.TEXT
+        type: Sequelize.TEXT,
       },
-      phoneNumber: {
-        type: Sequelize.STRING
+      phone_number: {
+        type: Sequelize.STRING,
       },
       hours: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
-      churchAffiliated: {
-        type: Sequelize.BOOLEAN
+      church_affiliated: {
+        type: Sequelize.BOOLEAN,
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('FoodPantries');
-  }
+  },
 };

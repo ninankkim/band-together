@@ -6,34 +6,37 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       name: {
-        type: Sequelize.TEXT
+        type: Sequelize.TEXT,
       },
       address: {
-        type: Sequelize.TEXT
+        type: Sequelize.TEXT,
       },
       phoneNumber: {
-        type: Sequelize.TEXT
+        type: Sequelize.TEXT,
       },
       lgbtFriendly: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
       },
-      womenAndChildren: {
-        type: Sequelize.BOOLEAN
+      women_and_children: {
+        type: Sequelize.BOOLEAN,
+      },
+      petfriendly: {
+        type: Sequelize.BOOLEAN,
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('Shelters');
-  }
+  },
 };
