@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+
 import { FormControl, FormLabel, FormControlLabel, Radio, RadioGroup, TextField } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
@@ -13,6 +14,11 @@ const useStyles = makeStyles((theme) => ({
         },
     },
 }));
+
+
+import Map from '../components/Map'
+
+
 
 
 export default function AddResourceScreen() {
@@ -42,6 +48,7 @@ export default function AddResourceScreen() {
 
     return (
         <div>
+            <Map />
             <div>
 
             </div>
