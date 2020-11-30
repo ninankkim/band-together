@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { FormControl, FormLabel, FormControlLabel, Radio, RadioGroup } from '@material-ui/core'
+import Map from '../components/Map'
+
 
 
 export default function FindResourcesScreen() {
@@ -10,6 +12,7 @@ export default function FindResourcesScreen() {
     }
     return (
         <div>
+            <Map />
             <img src="images/shelter.png" width="1800px" border="5px solid black" alt="find shelter heading"></img>
             <h1>Let us know more about you so we can help you find the right shelter.</h1>
             <FormControl className="formfield" component="fieldset">
