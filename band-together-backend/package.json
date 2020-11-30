@@ -2,18 +2,18 @@
   "name": "band-together-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "node app.js",
     "db:migrate": "npx sequelize-cli db:migrate",
-    "dev": "nodemon ./bin/www",
+    "dev": "nodemon app.js",
     "db:reset": "npx sequelize-cli db:drop; npx sequelize-cli db:create && npx sequelize-cli db:migrate"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "express-es6-template-engine": "^2.2.3",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.6",
     "pg": "^8.5.1",
