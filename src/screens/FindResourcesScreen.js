@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-
 import { FormControl, FormLabel, FormControlLabel, Radio, RadioGroup, TextField } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
 import NavigationIcon from '@material-ui/icons/Navigation';
+import Map from '../components/Map'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -16,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-import Map from '../components/Map'
 
 
 
@@ -52,7 +51,7 @@ export default function AddResourceScreen() {
             <div>
 
             </div>
-            <img src="images/shelter.png" width="1800px" border="5px solid black" alt="find shelter heading"></img>
+            <img src="images/findshelter.png" width="1800px" border="5px solid black" alt="find shelter heading"></img>
             <h1>Already Know the name of the Shelter?</h1>
             <form className={classes.root} noValidate autoComplete="off">
                 <TextField id="filled-basic" variant="filled" placeholder="Alison's Digs" onChange={handleName} />
@@ -105,6 +104,7 @@ export default function AddResourceScreen() {
         Submit
         </Fab>
             </form>
+        <Map />
 
         </div>
 
