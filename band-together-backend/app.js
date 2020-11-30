@@ -8,9 +8,10 @@ var logger = require('morgan');
 const port = 3000;
 
 var models = require('./models');
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var donationRouter = require('./routes/donationcenter');
+
+const donationRouter = require('./routes/api-donationcenter');
+const foodpantryRouter = require('./routes/api-foodpantry');
+const shelterRouter = require('./routes/api-shelter');
 
 const app = express();
 
@@ -20,9 +21,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/donation_center', donationRouter);
+app.use('/api/v1/donationcenter', donationRouter);
+app.use('/api/v1/foodpantry', foodpantryRouter);
+app.use('/api/v1/shelter', shelterRouter);
 
 app.engine('html', es6Renderer);
 app.set('views', 'templates');
