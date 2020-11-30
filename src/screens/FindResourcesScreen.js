@@ -5,6 +5,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
 import NavigationIcon from '@material-ui/icons/Navigation';
+import Map from '../components/Map'
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -16,7 +18,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-import Map from '../components/Map'
 
 
 
@@ -102,7 +103,6 @@ export default function AddResourceScreen() {
 
 
 
-       
 
 
     )
