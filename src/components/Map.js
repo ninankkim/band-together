@@ -15,7 +15,7 @@ export default function Map() {
   return (
     <ReactMapGL
       {...viewport}
-      mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+      let mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
     >
         markers go here
     </ReactMapGL>
