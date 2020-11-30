@@ -43,8 +43,6 @@ export default function AddResourceScreen() {
     const handleName = (event) => {
         setName(event.target.value);
     }
-
-
     return (
         <div>
 
@@ -139,8 +137,6 @@ export default function AddResourceScreen() {
         </Fab>
             </form>
         <Map />
-
-
 
     )
 }
