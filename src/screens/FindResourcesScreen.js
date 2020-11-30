@@ -3,8 +3,7 @@ import { FormControl, FormLabel, FormControlLabel, Radio, RadioGroup, TextField 
 import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
-import NavigationIcon from '@material-ui/icons/Navigation';
-import Map from '../components/Map'
+import Map from '../components/Map';
 
 
 
@@ -104,9 +103,7 @@ export default function AddResourceScreen() {
                     <FormControlLabel value="No" control={<Radio />} label="No" />
                 </RadioGroup>
             </FormControl>
-            <h2>Find Your Shelter</h2>
-            <h5>map api rendering here....</h5>
-            <button>Find Shelter</button>
+
             <Map />
         </div>
 
