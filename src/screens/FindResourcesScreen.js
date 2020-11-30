@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-export default function AddResourceScreen() {
+export default function FindResourceScreen() {
     const classes = useStyles();
     const [name, setName] = useState('')
     const [gender, setGender] = useState('')
@@ -51,11 +51,13 @@ export default function AddResourceScreen() {
     return (
         <div>
 
-            <img src="images/findshelter.png" width="1800px" border="5px solid black" alt="find shelter heading"></img>
+            <img src="images/findshelter.png" border="5px solid black" alt="find shelter heading"></img>
 
             <h1>Already Know the name of the Shelter?</h1>
             <form className={classes.root} noValidate autoComplete="off">
                 <TextField id="filled-basic" variant="filled" placeholder="Alison's Digs" onChange={handleName} />
+
+                <p></p>
                 <Fab variant="extended">
                     <AddIcon className={classes.extendedIcon} />
                     Submit
