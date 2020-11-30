@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { FormControl, FormLabel, FormControlLabel, Radio, RadioGroup } from '@material-ui/core'
+import Map from '../components/Map'
+
 
 
 export default function AddResourceScreen() {
@@ -24,6 +26,7 @@ export default function AddResourceScreen() {
 
     return (
         <div>
+            <Map />
             <div>
                 <h1>Already Know the name of the Shelter?</h1>
                 
