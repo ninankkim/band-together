@@ -26,7 +26,6 @@ export default function AddResourceScreen() {
 
     return (
         <div>
-            <Map />
             <div>
                 <h1>Already Know the name of the Shelter?</h1>
                 
@@ -67,6 +66,7 @@ export default function AddResourceScreen() {
             <h2>Find Your Shelter</h2>
             <h5>map api rendering here....</h5>
             <button>Find Shelter</button>
+            <Map />
             </div>
 
 
