@@ -4,49 +4,62 @@ import Map from '../components/Map'
 
 
 
-export default function FindResourcesScreen() {
-    const [value, changeValue] = useState('')
+export default function AddResourceScreen() {
+    const [gender, setGender] = useState('')
+    const [child, setChild] = useState('')
+    const [ident, setIdent] = useState('')
+    const [pet, setPet] = useState('')
 
-    const handleChange = () => {
-        //logic for another time
+    const handleGender = (event) => {
+        setGender(event.target.value);
     }
+    const handleChild = (event) => {
+        setChild(event.target.value);
+    }
+    const handleIdent = (event) => {
+        setIdent(event.target.value);
+    }
+    const handlePet = (event) => {
+        setPet(event.target.value);
+    }
+
+
     return (
         <div>
             <Map />
+            <div>
+                <h1>Already Know the name of the Shelter?</h1>
+                
+            </div>
             <img src="images/shelter.png" width="1800px" border="5px solid black" alt="find shelter heading"></img>
-            <h1>Let us know more about you so we can help you find the right shelter.</h1>
+            <h1>Let us know more about you so we can help you find the right shelter</h1>
             <FormControl className="formfield" component="fieldset">
-                <FormLabel component="legend">Gender</FormLabel>
-                <RadioGroup aria-label="gender" name="gender1" value={value} onChange={handleChange}>
+                <FormLabel component="legend">Gender (can leave blank)</FormLabel>
+                <RadioGroup aria-label="gender" name="gender" onChange={handleGender}>
                     <FormControlLabel value="female" control={<Radio />} label="Female" />
                     <FormControlLabel value="male" control={<Radio />} label="Male" />
-                    <FormControlLabel value="Transgender" control={<Radio />} label="Transgender" />
                 </RadioGroup>
             </FormControl>
+            <p></p>
             <FormControl className="formfield" component="fieldset">
                 <FormLabel component="legend">Bringing Your Child?</FormLabel>
-                <RadioGroup aria-label="gender" name="gender1" value={value} onChange={handleChange}>
+                <RadioGroup aria-label="gender" name="child"  onChange={handleChild}>
                     <FormControlLabel value="yesChild" control={<Radio />} label="Yes" />
                     <FormControlLabel value="noChild" control={<Radio />} label="No" />
                 </RadioGroup>
             </FormControl>
+            <p></p>
             <FormControl className="formfield" component="fieldset">
-                <FormLabel component="legend">Question 3</FormLabel>
-                <RadioGroup aria-label="gender" name="gender1" value={value} onChange={handleChange}>
-                    <FormControlLabel value="Answer1" control={<Radio />} label="Answer1" />
-                    <FormControlLabel value="Answer2" control={<Radio />} label="Answer2" />
+                <FormLabel component="legend">LGBTQ+ Friendly?</FormLabel>
+                <RadioGroup aria-label="gender" name="lgbtq" onChange={handleIdent}>
+                    <FormControlLabel value="LGBTQFriendly" control={<Radio />} label="Yes" />
+                    <FormControlLabel value="notfriendly" control={<Radio />} label="No" />
                 </RadioGroup>
             </FormControl>
+            <p></p>
             <FormControl className="formfield" component="fieldset">
-                <FormLabel component="legend">Question 4</FormLabel>
-                <RadioGroup aria-label="gender" name="gender1" value={value} onChange={handleChange}>
-                    <FormControlLabel value="AnswerA" control={<Radio />} label="AnswerA" />
-                    <FormControlLabel value="AnswerB" control={<Radio />} label="AnswerB" />
-                </RadioGroup>
-            </FormControl>
-            <FormControl className="formfield" component="fieldset">
-                <FormLabel component="legend">Bringing a Pet?</FormLabel>
-                <RadioGroup aria-label="gender" name="gender1" value={value} onChange={handleChange}>
+                <FormLabel component="legend">Pet Shelter Friendly?</FormLabel>
+                <RadioGroup aria-label="gender" name="pet" onChange={handlePet}>
                     <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
                     <FormControlLabel value="No" control={<Radio />} label="No" />
                 </RadioGroup>
