@@ -3,7 +3,7 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert(
-      'DonationCenter',
+      'DonationCenters',
       [
         {
           "name": "Salvation Army Family Store & Donation Center",
