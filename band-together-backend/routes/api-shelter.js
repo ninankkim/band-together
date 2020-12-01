@@ -18,6 +18,8 @@ router.post('/', (req, res) => {
     !req.body ||
     !req.body.name ||
     !req.body.address ||
+    !req.body.latitude ||
+    !req.body.longitude ||
     !req.body.phone_number ||
     !req.body.LGBTfriendly ||
     !req.body.women_and_children
@@ -30,6 +32,8 @@ router.post('/', (req, res) => {
   models.Shelter.create({
     name: req.body.name,
     address: req.body.address,
+    latitude: req.body.latitude,
+    longitude: req.body.longitude,
     phone_number: req.body.phone_number,
     LGBTfriendly: req.body.LGBTfriendly,
     women_and_children: req.body.women_and_children,
@@ -46,6 +50,8 @@ router.put('/:id', (req, res) => {
     !req.body ||
     !req.body.name ||
     !req.body.address ||
+    !req.body.latitude ||
+    !req.body.longitude ||
     !req.body.phone_number ||
     !req.body.LGBTfriendly ||
     !req.body.women_and_children ||
@@ -60,6 +66,8 @@ router.put('/:id', (req, res) => {
     {
       name: req.body.name,
       address: req.body.address,
+      latitude: req.body.latitude,
+      longitude: req.body.longitude,
       phone_number: req.body.phone_number,
       LGBTfriendly: req.body.LGBTfriendly,
       women_and_children: req.body.women_and_children,

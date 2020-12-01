@@ -15,6 +15,8 @@ module.exports = (sequelize, DataTypes) => {
     {
       name: DataTypes.TEXT,
       address: DataTypes.TEXT,
+      latitude: DataTypes.FLOAT,
+      longitude: DataTypes.FLOAT,
       phone_number: DataTypes.STRING,
       hours: DataTypes.STRING,
       church_affiliated: DataTypes.BOOLEAN,
