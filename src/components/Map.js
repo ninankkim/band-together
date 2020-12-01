@@ -39,6 +39,7 @@ export default function Map() {
           setViewport(viewport);
       }}
     >
+        {}
     </ReactMapGL>
   );
 }

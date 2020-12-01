@@ -67,7 +67,7 @@
     "url": "https://github.com/ninankkim/band-together/issues"
   },
   "homepage": "https://github.com/ninankkim/band-together#readme",
-  "description": ""
+  "description": "",
 
   "proxy": "http://localhost:3000"
 

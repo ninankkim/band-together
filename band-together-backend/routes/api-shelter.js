@@ -21,7 +21,7 @@ router.post('/', (req, res) => {
     !req.body.latitude ||
     !req.body.longitude ||
     !req.body.phone_number ||
-    !req.body.LGBTfriendly ||
+    !req.body.lgbtFriendly ||
     !req.body.women_and_children
   ) {
     res.status(400).json({
@@ -35,9 +35,8 @@ router.post('/', (req, res) => {
     latitude: req.body.latitude,
     longitude: req.body.longitude,
     phone_number: req.body.phone_number,
-    LGBTfriendly: req.body.LGBTfriendly,
+    lgbtFriendly: req.body.lgbtFriendly,
     women_and_children: req.body.women_and_children,
-    petfriendly: req.body.petfriendly,
   }).then(post => {
     res.status(201).json(post);
   });
@@ -53,12 +52,12 @@ router.put('/:id', (req, res) => {
     !req.body.latitude ||
     !req.body.longitude ||
     !req.body.phone_number ||
-    !req.body.LGBTfriendly ||
-    !req.body.women_and_children ||
-    !req.body.petfriendly
-  ) {
+    !req.body.lgbtFriendly ||
+    !req.body.women_and_children 
+   ) {
     res.status(400).json({
       error: 'Please submit all required fields',
+    
     });
     return;
   }
@@ -69,9 +68,8 @@ router.put('/:id', (req, res) => {
       latitude: req.body.latitude,
       longitude: req.body.longitude,
       phone_number: req.body.phone_number,
-      LGBTfriendly: req.body.LGBTfriendly,
+      lgbtFriendly: req.body.lgbtFriendly,
       women_and_children: req.body.women_and_children,
-      petfriendly: req.body.petfriendly,
     },
     {
       where: {
