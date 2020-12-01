@@ -4,7 +4,7 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert(
       'Shelters',
-      [
+      
         
           [
             {
@@ -14,6 +14,8 @@ module.exports = {
               "hours": "3:30-4:30 PM",
               "lgbtFriendly":false,
               "women_and_children": false,
+              "createdAt": new Date(),
+              "updatedAt": new Date()
             },
             {
               "name": "Salvation Army's Star of Hope",
@@ -22,6 +24,8 @@ module.exports = {
               "hours": "8 AM-11 AM, 1 PM-3 PM",
               "lgbtFriendly":false,
               "women_and_children": false,
+              "createdAt": new Date(),
+              "updatedAt": new Date()
             },
             {
               "name": "Open Door Mission",
@@ -30,6 +34,8 @@ module.exports = {
               "hours": "M-W 6-10 AM",
               "lgbtFriendly":false,
               "women_and_children": false,
+              "createdAt": new Date(),
+              "updatedAt": new Date()
             },
             {
               "name": "Salvation Army Conroe",
@@ -38,6 +44,8 @@ module.exports = {
               "hours": "Unavailable",
               "lgbtFriendly":false,
               "women_and_children": false,
+              "createdAt": new Date(),
+              "updatedAt": new Date()
             },
             {
               "name": "Modest Family",
@@ -46,6 +54,8 @@ module.exports = {
               "hours": "Unavailable",
               "lgbtFriendly":false,
               "women_and_children": false,
+              "createdAt": new Date(),
+              "updatedAt": new Date()
             },
             {
               "name": "Bay Area Homeless Britton-Fuller Family Center",
@@ -54,6 +64,8 @@ module.exports = {
               "hours": "Screening by phone",
               "lgbtFriendly":false,
               "women_and_children": false,
+              "createdAt": new Date(),
+              "updatedAt": new Date()
             },
             {
               "name": "Bay Area Homeless Emergency Shelter",
@@ -62,6 +74,8 @@ module.exports = {
               "hours": "Screening by phone",
               "lgbtFriendly":false,
               "women_and_children": false,
+              "createdAt": new Date(),
+              "updatedAt": new Date()
             },
             {
               "name": "Family Promise of Montgomery County - Conroe",
@@ -70,6 +84,8 @@ module.exports = {
               "hours": "Screening by phone",
               "lgbtFriendly":false,
               "women_and_children": true,
+              "createdAt": new Date(),
+              "updatedAt": new Date()
 
             },
             {
@@ -79,6 +95,8 @@ module.exports = {
               "hours": "M-F 7 AM - 5 PM",
               "lgbtFriendly":false,
               "women_and_children": true,
+              "createdAt": new Date(),
+              "updatedAt": new Date()
 
             },
             {
@@ -88,6 +106,8 @@ module.exports = {
               "hours": "M-F",
               "lgbtFriendly":false,
               "women_and_children": true,
+              "createdAt": new Date(),
+              "updatedAt": new Date()
 
             },
             {
@@ -97,6 +117,8 @@ module.exports = {
               "hours": "Screening by phone",
               "lgbtFriendly":false,
               "women_and_children": true,
+              "createdAt": new Date(),
+              "updatedAt": new Date()
 
             },
             {
@@ -106,6 +128,8 @@ module.exports = {
               "hours": "Unavailable",
               "lgbtFriendly":false,
               "women_and_children": true,
+              "createdAt": new Date(),
+              "updatedAt": new Date()
 
             },
             {
@@ -115,6 +139,8 @@ module.exports = {
               "hours": "Unavailable",
               "lgbtFriendly":false,
               "women_and_children": false,
+              "createdAt": new Date(),
+              "updatedAt": new Date()
             },
             {
               "name": "Mission of Yahweh",
@@ -123,6 +149,8 @@ module.exports = {
               "hours": "Unavailable",
               "lgbtFriendly":false,
               "women_and_children": true,
+              "createdAt": new Date(),
+              "updatedAt": new Date()
 
             },
             {
@@ -132,8 +160,10 @@ module.exports = {
               "hours": "Unavailable",
               "lgbtFriendly": false,
               "women_and_children": false,
+              "createdAt": new Date(),
+              "updatedAt": new Date()
             },
-          ]
+          
       ],
       {}
     );

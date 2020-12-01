@@ -1,10 +1,15 @@
 import * as React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ReactMapGL, {Marker} from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import * as shelterData from "seeders"
+
+
+
 
 export default function Map() {
+    const [ shelters, setShelters ] = useState([])
+
+
   const [viewport, setViewport] = useState({
     width: "50vw",
     height: "50vh",
@@ -12,6 +17,18 @@ export default function Map() {
     longitude: -97.60391235351562,
     zoom: 8
   });
+
+
+  // componentDidMount
+  useEffect(() => {
+    fetch('/api/v1/shelter')
+      .then(res => res.json())
+      .then(data => {
+        setShelters(data);
+      })
+  }, [])
+
+
 
   return (
     <ReactMapGL
@@ -22,7 +39,6 @@ export default function Map() {
           setViewport(viewport);
       }}
     >
-        markers go here
     </ReactMapGL>
   );
 }
