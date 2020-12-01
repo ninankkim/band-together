@@ -3,7 +3,7 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert(
-      'FoodPantry',
+      'FoodPantries',
       [
         {
           "name": "House of Amos",
@@ -11,6 +11,8 @@ module.exports = {
           "phone_number": 2814959061,
           "hours": "M-Th 9 AM - 11:45 AM, Sat 10 AM - 11:15 AM",
           "church_affiliated": false,
+          "createdAt": new Date(),
+          "updatedAt": new Date()
         },
         {
           "name": "Alvin Community Food Pantry",
@@ -18,6 +20,8 @@ module.exports = {
           "phone_number": 2818248871,
           "hours": "Unlisted",
           "church_affiliated": false,
+          "createdAt": new Date(),
+          "updatedAt": new Date()
         },
         {
           "name": "Gulf Coast Community Services Association",
@@ -25,6 +29,8 @@ module.exports = {
           "phone_number": 7133934700,
           "hours": "M-F 9 AM - 12 PM, 1 PM - 5 PM",
           "church_affiliated": false,
+          "createdAt": new Date(),
+          "updatedAt": new Date()
         },
         {
           "name": "A Touch of God's Love Outreach",
@@ -32,6 +38,8 @@ module.exports = {
           "phone_number": 3467018094,
           "hours": "M,T, Th 10 AM - 2 PM, W 3 PM - 6 PM",
           "church_affiliated": true,
+          "createdAt": new Date(),
+          "updatedAt": new Date()
         },
         {
           "name": "Westbury Church of Christ",
@@ -39,6 +47,8 @@ module.exports = {
           "phone_number": 7137297880,
           "hours": "Sat 10 AM - 12 PM, 1 visit allowed/month",
           "church_affiliated": true,
+          "createdAt": new Date(),
+          "updatedAt": new Date()
         },
         {
           "name": "Braes Interfaith Ministries",
@@ -46,6 +56,8 @@ module.exports = {
           "phone_number": 7137232671,
           "hours": "M, W, F 10 AM - 2 PM",
           "church_affiliated": true,
+          "createdAt": new Date(),
+          "updatedAt": new Date()
         },
         {
           "name": "St. Bernadette Catholic Church",
@@ -53,6 +65,8 @@ module.exports = {
           "phone_number": 2814860337,
           "hours": "T, W, Th 9:30 AM - 11:30 AM",
           "church_affiliated": true,
+          "createdAt": new Date(),
+          "updatedAt": new Date()
         },
         {
           "name": "Sacred Heart Catholic Church",
@@ -60,6 +74,8 @@ module.exports = {
           "phone_number": 9367568186,
           "hours": "M 10 AM - 3 PM",
           "church_affiliated": true,
+          "createdAt": new Date(),
+          "updatedAt": new Date()
         },
         {
           "name": "Montgomery County Food Bank",
@@ -67,6 +83,8 @@ module.exports = {
           "phone_number": 9362718800,
           "hours": "M-Th 8 AM - 5 PM",
           "church_affiliated": false,
+          "createdAt": new Date(),
+          "updatedAt": new Date()
         },
         {
           "name": "First Christian Church Conroe",
@@ -74,6 +92,8 @@ module.exports = {
           "phone_number": 9367563554,
           "hours": "W 9 AM - 11:45 AM",
           "church_affiliated": true,
+          "createdAt": new Date(),
+          "updatedAt": new Date()
         },
         {
           "name": "Tamina Community Center",
@@ -81,6 +101,8 @@ module.exports = {
           "phone_number": 2814654646,
           "hours": "M - F 3 PM - 6 PM",
           "church_affiliated": false,
+          "createdAt": new Date(),
+          "updatedAt": new Date()
         },
         {
           "name": "Cypress Houston Food Pantries",
@@ -88,6 +110,8 @@ module.exports = {
           "phone_number": 2819557684,
           "hours": "T 9:30 AM - 5 PM, F 9:30 AM - 3 PM (other hours with appointment)",
           "church_affiliated": true,
+          "createdAt": new Date(),
+          "updatedAt": new Date()
         },
         {
           "name": "Gods Storehouse - Fountain of Life Fellowship",
@@ -95,6 +119,8 @@ module.exports = {
           "phone_number": 2813739337,
           "hours": "M 6 - 8 PM, June-August 3:30 PM - 6 PM",
           "church_affiliated": true,
+          "createdAt": new Date(),
+          "updatedAt": new Date()
         },
         {
           "name": "St Hyacinthh Catholic Church",
@@ -102,6 +128,8 @@ module.exports = {
           "phone_number": 2814794298,
           "hours": "M, W, F 1 PM - 2:30 PM",
           "church_affiliated": true,
+          "createdAt": new Date(),
+          "updatedAt": new Date()
         },
         {
           "name": "M.I. Lewis Social Services",
@@ -109,6 +137,8 @@ module.exports = {
           "phone_number": 2815342043,
           "hours": "T-F 8:30 AM - 1 PM, 6 times allowed/year",
           "church_affiliated": false,
+          "createdAt": new Date(),
+          "updatedAt": new Date()
         }
       ]
     );
