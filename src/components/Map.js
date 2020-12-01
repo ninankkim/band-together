@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useState, useEffect } from 'react';
 import ReactMapGL, {Marker} from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import HomeIcon from '@material-ui/icons/Home';
 
 
 
@@ -39,6 +40,12 @@ export default function Map() {
           setViewport(viewport);
       }}
     >
+        {shelters.map((shelter) => {
+          return <Marker key={shelter.id} latitude={shelter.latitude} longitude={shelter.longitude}>
+            <HomeIcon />
+          </Marker>
+
+        })}
     </ReactMapGL>
   );
 }

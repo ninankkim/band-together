@@ -16,6 +16,8 @@ router.post('/', (req, res) => {
     !req.body ||
     !req.body.name ||
     !req.body.address ||
+    !req.body.latitude ||
+    !req.body.longitude ||
     !req.body.phone_number ||
     !req.body.hours ||
     !req.body.church_affiliated
@@ -28,6 +30,8 @@ router.post('/', (req, res) => {
   models.FoodPantry.create({
     name: req.body.name,
     address: req.body.address,
+    latitude: req.body.latitude,
+    longitude: req.body.longitude,
     phone_number: req.body.phone_number,
     hours: req.body.hours,
     church_affiliated: req.body.church_affiliated,
@@ -43,6 +47,8 @@ router.put('/:id', (req, res) => {
     !req.body ||
     !req.body.name ||
     !req.body.address ||
+    !req.body.latitude ||
+    !req.body.longitude ||
     !req.body.phone_number ||
     !req.body.hours ||
     !req.body.church_affiliated
@@ -56,6 +62,8 @@ router.put('/:id', (req, res) => {
     {
       name: req.body.name,
       address: req.body.address,
+      latitude: req.body.latitude,
+      longitude: req.body.longitude,
       phone_number: req.body.phone_number,
       hours: req.body.hours,
       church_affiliated: req.body.church_affiliated,

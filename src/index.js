@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
-import AboutUsScreen from './screens/AboutUsScreen';
+
 
 ReactDOM.render(
   <React.StrictMode>

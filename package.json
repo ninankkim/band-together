@@ -55,5 +55,16 @@
       "last 1 safari version"
     ]
   },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ninankkim/band-together.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ninankkim/band-together/issues"
+  },
+  "description": "",
   "proxy": "http://localhost:3000"
 }

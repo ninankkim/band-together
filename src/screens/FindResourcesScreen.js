@@ -47,7 +47,7 @@ export default function FindResourceScreen() {
 
             <img src="images/findshelterbw.png"  border="5px solid black" alt="find shelter heading" className="responsive"></img>
 
-            <h1>Already Know the name of the Shelter?</h1>
+            <h1>Looking for a specific shelter? Search the name. </h1>
             <form className={classes.root} noValidate autoComplete="off">
                 <TextField id="filled-basic" variant="filled" placeholder="Alison's Digs" onChange={handleName} />
 
@@ -60,7 +60,7 @@ export default function FindResourceScreen() {
 
 
 
-            <h1>Let us know more about you so we can help you find the right shelter</h1>
+            <h1>Please enter more information about the shelter below!</h1>
             <form>
                 <FormControl className="formfield" component="fieldset">
                     <FormLabel component="legend">Gender (can leave blank)</FormLabel>
@@ -83,14 +83,6 @@ export default function FindResourceScreen() {
                     <RadioGroup aria-label="gender" name="lgbtq" onChange={handleIdent}>
                         <FormControlLabel value="LGBTQFriendly" control={<Radio />} label="Yes" />
                         <FormControlLabel value="notfriendly" control={<Radio />} label="No" />
-                    </RadioGroup>
-                </FormControl>
-                <p></p>
-                <FormControl className="formfield" component="fieldset">
-                    <FormLabel component="legend">Pet Shelter Friendly?</FormLabel>
-                    <RadioGroup aria-label="gender" name="pet" onChange={handlePet}>
-                        <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
-                        <FormControlLabel value="No" control={<Radio />} label="No" />
                     </RadioGroup>
                 </FormControl>
                 <p></p>

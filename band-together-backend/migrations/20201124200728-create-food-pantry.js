@@ -14,6 +14,12 @@ module.exports = {
       address: {
         type: Sequelize.TEXT,
       },
+      latitude: {
+        type: Sequelize.FLOAT,
+      },
+      longitude: {
+        type: Sequelize.FLOAT,
+      },
       phone_number: {
         type: Sequelize.STRING,
       },

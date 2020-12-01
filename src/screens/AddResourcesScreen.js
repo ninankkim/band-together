@@ -44,9 +44,9 @@ export default function AddResourceScreen() {
             <form className={classes.root} noValidate autoComplete="off">
             <TextField id="filled-basic" variant="filled" placeholder="Alison's Digs" onChange={handleName} />
             <h3>What's The Phone Number for the Shelter?</h3>
-            <TextField id="filled-basic" variant="filled" placeholder="Alison's Digs" onChange={handleName} />
+            <TextField id="filled-basic" variant="filled" placeholder="1-800-234-5678" onChange={handleName} />
             <h3>What's The Address for the Shelter?</h3>
-                <TextField id="filled-basic" variant="filled" placeholder="Alison's Digs" onChange={handleName} />
+                <TextField id="filled-basic" variant="filled" placeholder="789 Rainbow Drive" onChange={handleName} />
             </form>
 
             <h1>Let us know more about the shelter you would like to add!</h1>
@@ -74,14 +74,7 @@ export default function AddResourceScreen() {
                         <FormControlLabel value="notfriendly" control={<Radio />} label="No" />
                     </RadioGroup>
                 </FormControl>
-                <p></p>
-                <FormControl className="formfield" component="fieldset">
-                    <FormLabel component="legend">Pet Shelter Friendly?</FormLabel>
-                    <RadioGroup aria-label="gender" name="pet" onChange={handlePet}>
-                        <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
-                        <FormControlLabel value="No" control={<Radio />} label="No" />
-                    </RadioGroup>
-                </FormControl>
+
                 <p></p>
                 <Fab variant="extended">
                     <AddIcon className={classes.extendedIcon} />
