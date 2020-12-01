@@ -21,12 +21,14 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 const useStyles = makeStyles({
   list: {
-    width: 250
+    width: 250,
+    alignItem: 'center',
+
   },
   fullList: {
   },
   listitem: {
-    color: 'purple'
+    color: 'black',
   }
 });
 
@@ -65,30 +67,24 @@ const useStyles = makeStyles({
                 )
               } else if (text === 'Add Resources') {
                 return (
-                  <Link to="/addresources">
-                  <ListItem button key={text}>
+                  <ListItem className={classes.listitem} button key={text} component={Link} to="/addresources">
                     <ListItemIcon><HomeWorkIcon /></ListItemIcon>
                     <ListItemText primary={text} />
                   </ListItem>
-                  </Link>
                 )
               } else if (text === 'Find Resources') {
                 return (
-                  <Link to="/findresources">
-                  <ListItem button key={text}>
+                  <ListItem className={classes.listitem} button key={text} component={Link} to="/findresources">
                     <ListItemIcon><HomeIcon /></ListItemIcon>
                     <ListItemText primary={text} />
                   </ListItem>
-                  </Link>
                 )
               } else {
                 return (
-                  <Link to="/contributors">
-                    <ListItem button key={text}>
+                    <ListItem className={classes.listitem} button key={text} component={Link} to="/contributors">
                       <ListItemIcon><PeopleIcon /></ListItemIcon>
                       <ListItemText primary={text} />
                     </ListItem>
-                  </Link>
                 )
               }
             })}
