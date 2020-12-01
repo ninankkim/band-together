@@ -51,7 +51,7 @@ export default function AddResourceScreen() {
     return (
         <div>
 
-            <img src="images/findshelter.png" width="1800px" border="5px solid black" alt="find shelter heading"></img>
+            <img src="images/findshelterbw.png"  border="5px solid black" alt="find shelter heading" className="responsive"></img>
 
             <h1>Already Know the name of the Shelter?</h1>
             <form className={classes.root} noValidate autoComplete="off">

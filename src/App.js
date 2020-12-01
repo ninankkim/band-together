@@ -21,7 +21,7 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 const useStyles = makeStyles({
   list: {
-    width: 250,
+    width: 250
   },
   fullList: {
     width: 'auto',
@@ -118,6 +118,7 @@ const useStyles = makeStyles({
         </Switch>
         </>
         ))}
+        <footer className="row center"></footer>
       </div>
     </BrowserRouter>
   );

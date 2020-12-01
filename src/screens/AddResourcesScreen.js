@@ -13,6 +13,7 @@ export default function AddResourceScreen() {
 
     return (
         <div>
+            <img src="images/addshelterbwd.png"  border="5px solid black" alt="find shelter heading" className="responsive"></img>
             <h1>This is your add screen, ya dummy</h1>
             </div>
 
