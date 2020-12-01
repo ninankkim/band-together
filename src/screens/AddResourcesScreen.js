@@ -39,6 +39,7 @@ export default function AddResourceScreen() {
 
     return (
         <div>
+            <img src="images/addshelterbwd.png"  border="5px solid black" alt="find shelter heading" className="responsive"></img>
             <h3>What's The Shelter Called?</h3>
             <form className={classes.root} noValidate autoComplete="off">
             <TextField id="filled-basic" variant="filled" placeholder="Alison's Digs" onChange={handleName} />
