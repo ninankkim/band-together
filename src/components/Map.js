@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { useState } from 'react';
-import ReactMapGL from 'react-map-gl';
+import ReactMapGL, {Marker} from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import * as shelterData from "seeders"
 
 export default function Map() {
   const [viewport, setViewport] = useState({
@@ -16,6 +17,10 @@ export default function Map() {
     <ReactMapGL
       {...viewport}
       let mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+      mapStyle="mapbox://styles/bargavi-dev/cki67zptc3d5o19try3pjc9fh"
+      onViewportChange={ viewport => {
+          setViewport(viewport);
+      }}
     >
         markers go here
     </ReactMapGL>
