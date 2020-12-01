@@ -22,9 +22,9 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 const useStyles = makeStyles({
   list: {
     width: 250,
+    color: 'black',
   },
   fullList: {
-    width: 'auto',
   },
 });
 
@@ -34,6 +34,7 @@ const useStyles = makeStyles({
   const classes = useStyles();
   const [sidebar, setSideBar] = useState ({
     left: false,
+
   });
 
   const toggleDrawer = (anchor, open) => (event) => {
@@ -51,11 +52,11 @@ const useStyles = makeStyles({
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-    <List className="nav-bar">
+    <List>
             {['Home', 'Add Resources', 'Find Resources', 'Contributors'].map((text, index) => {
               if (text === 'Home') {
                 return (
-                  <Link to="/">
+                  <Link to="/" >
                     <ListItem button key={text}>
                       <ListItemIcon><InboxIcon /></ListItemIcon>
                       <ListItemText primary={text} />
