@@ -14,7 +14,7 @@ module.exports = {
       address: {
         type: Sequelize.TEXT,
       },
-      phoneNumber: {
+      phone_number: {
         type: Sequelize.TEXT,
       },
       lgbtFriendly: {

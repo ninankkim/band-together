@@ -1,14 +1,12 @@
 const http = require('http');
 const express = require('express');
 const es6Renderer = require('express-es6-template-engine');
-const hostname = '127.0.0.1';
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 var models = require('./models');
-
 
 const donationRouter = require('./routes/api-donationcenter');
 const foodpantryRouter = require('./routes/api-foodpantry');
@@ -32,9 +30,9 @@ app.set('view engine', 'html');
 
 const server = http.createServer(app);
 
-server.listen(port, hostname, () => {
+server.listen(port, () => {
   console.log(
-    `Band Together is currently running at http://${hostname}:${port}/`
+    `Band Together is currently running at http://localhost:${port}/`
   );
 });
 
