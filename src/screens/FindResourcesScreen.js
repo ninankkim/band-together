@@ -3,11 +3,7 @@ import { FormControl, FormLabel, FormControlLabel, Radio, RadioGroup, TextField 
 import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
-import Map from '../components/Map';
-
-
-
-
+import Map from '../components/Map'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -46,12 +42,10 @@ export default function FindResourceScreen() {
     const handleName = (event) => {
         setName(event.target.value);
     }
-
-
     return (
         <div>
 
-            <img src="images/findshelter.png" border="5px solid black" alt="find shelter heading"></img>
+            <img src="images/findshelterbw.png"  border="5px solid black" alt="find shelter heading" className="responsive"></img>
 
             <h1>Already Know the name of the Shelter?</h1>
             <form className={classes.root} noValidate autoComplete="off">
