@@ -3,11 +3,7 @@ import { FormControl, FormLabel, FormControlLabel, Radio, RadioGroup, TextField 
 import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
-import Map from '../components/Map';
-
-
-
-
+import Map from '../components/Map'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -46,8 +42,6 @@ export default function FindResourceScreen() {
     const handleName = (event) => {
         setName(event.target.value);
     }
-
-
     return (
         <div>
 
