@@ -120,4 +120,5 @@ const useStyles = makeStyles({
     </BrowserRouter>
   );
 }
+
 export default App;

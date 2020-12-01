@@ -8,7 +8,6 @@
     "db:migrate": "npx sequelize-cli db:migrate",
     "dev": "nodemon app.js",
     "db:reset": "npx sequelize-cli db:drop; npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all"
-
   },
   "dependencies": {
     "cookie-parser": "^1.4.5",
