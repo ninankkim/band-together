@@ -20,8 +20,7 @@ router.post('/', (req, res) => {
     !req.body.address ||
     !req.body.phone_number ||
     !req.body.LGBTfriendly ||
-    !req.body.women_and_children ||
-    !req.body.petfriendly
+    !req.body.women_and_children
   ) {
     res.status(400).json({
       error: 'Please submit all required fields',

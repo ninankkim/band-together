@@ -14,16 +14,16 @@ module.exports = {
       address: {
         type: Sequelize.TEXT,
       },
-      phoneNumber: {
+      phone_number: {
+        type: Sequelize.TEXT,
+      },
+      hours: {
         type: Sequelize.TEXT,
       },
       lgbtFriendly: {
         type: Sequelize.BOOLEAN,
       },
       women_and_children: {
-        type: Sequelize.BOOLEAN,
-      },
-      petfriendly: {
         type: Sequelize.BOOLEAN,
       },
       createdAt: {

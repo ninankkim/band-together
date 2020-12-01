@@ -21,11 +21,13 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 const useStyles = makeStyles({
   list: {
-    width: 250,
+    width: 250
   },
   fullList: {
-    width: 'auto',
   },
+  listitem: {
+    color: 'purple'
+  }
 });
 
             
@@ -34,6 +36,7 @@ const useStyles = makeStyles({
   const classes = useStyles();
   const [sidebar, setSideBar] = useState ({
     left: false,
+
   });
 
   const toggleDrawer = (anchor, open) => (event) => {
@@ -51,16 +54,14 @@ const useStyles = makeStyles({
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-    <List className="nav-bar">
+    <List>
             {['Home', 'Add Resources', 'Find Resources', 'Contributors'].map((text, index) => {
               if (text === 'Home') {
                 return (
-                  <Link to="/">
-                    <ListItem button key={text}>
+                    <ListItem className={classes.listitem} button key={text} component={Link} to="/">
                       <ListItemIcon><InboxIcon /></ListItemIcon>
                       <ListItemText primary={text} />
                     </ListItem>
-                  </Link>
                 )
               } else if (text === 'Add Resources') {
                 return (
@@ -118,6 +119,7 @@ const useStyles = makeStyles({
         </Switch>
         </>
         ))}
+        <footer className="row center"></footer>
       </div>
     </BrowserRouter>
   );

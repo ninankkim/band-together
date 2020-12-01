@@ -1,12 +1,12 @@
 {
   "name": "band-together-backend",
   "version": "1.0.0",
-  "main": "server.js",
+  "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "node app.js",
     "db:migrate": "npx sequelize-cli db:migrate",
-    "dev": "nodemon ./bin/www",
+    "dev": "nodemon app.js",
     "db:reset": "npx sequelize-cli db:drop; npx sequelize-cli db:create && npx sequelize-cli db:migrate"
   },
   "dependencies": {
@@ -24,6 +24,5 @@
   "devDependencies": {},
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "description": ""
+  "license": "ISC"
 }
