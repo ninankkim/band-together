@@ -4,7 +4,7 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert(
       'Shelters',
-   
+      [
           {
             "name": "Magnificat Houses Men's Shelter",
             "address": "3209 Austin St, Houston TX 77004",
