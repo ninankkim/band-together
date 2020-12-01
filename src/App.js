@@ -26,6 +26,9 @@ const useStyles = makeStyles({
   },
   fullList: {
   },
+  listitem: {
+    color: 'purple'
+  }
 });
 
             
@@ -56,12 +59,10 @@ const useStyles = makeStyles({
             {['Home', 'Add Resources', 'Find Resources', 'Contributors'].map((text, index) => {
               if (text === 'Home') {
                 return (
-                  <Link to="/" >
-                    <ListItem button key={text}>
+                    <ListItem className={classes.listitem} button key={text} component={Link} to="/">
                       <ListItemIcon><InboxIcon /></ListItemIcon>
                       <ListItemText primary={text} />
                     </ListItem>
-                  </Link>
                 )
               } else if (text === 'Add Resources') {
                 return (
