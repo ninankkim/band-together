@@ -5,6 +5,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import HomeIcon from '@material-ui/icons/Home';
 import FoodIcon from '@material-ui/icons/Restaurant'
 import DonationCenter from '@material-ui/icons/ShoppingCart';
+import CustomCards from './CustomCards';
 
 export default function Map() {
   const [shelters, setShelters] = useState([]);
@@ -50,6 +51,10 @@ export default function Map() {
   }, []);
 
   return (
+    <>
+        <CustomCards types='shelters'>
+
+</CustomCards>
     <ReactMapGL
       {...viewport}
       let
@@ -160,5 +165,6 @@ export default function Map() {
         </Popup>
       ) : null}
     </ReactMapGL>
+    </>
   );
 }
