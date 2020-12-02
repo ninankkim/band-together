@@ -44,11 +44,13 @@ body {
   width: 100%;
   height: auto;
   margin: 0 auto;
+  
 }
 
 html {
   position: relative;
   min-height: 100%;
+  
   }
   body {
   margin: 0 0 100px; 
@@ -71,7 +73,5 @@ html {
   font-size:1.5em;
   text-align: center;
   line-height:100px;
-  /* margin: 0; */
-  padding: 1px;
   }
 
