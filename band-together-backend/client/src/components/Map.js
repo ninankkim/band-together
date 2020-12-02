@@ -41,12 +41,13 @@ export default function Map() {
             key={shelter.id}
             latitude={shelter.latitude}
             longitude={shelter.longitude}
-            onclick={e => {
-              e.preventDefault();
-              setSelectedShelters(shelters);
-            }}
           >
-            <HomeIcon></HomeIcon>
+            <HomeIcon
+              onClick={e => {
+                e.preventDefault();
+                setSelectedShelters(shelter);
+              }}
+            ></HomeIcon>
           </Marker>
         );
       })}
@@ -59,10 +60,10 @@ export default function Map() {
           }}
         >
           <div>
-            <h2>{selectedShelters.properties.name}</h2>
-            <h2>{selectedShelters.properties.phone_number}</h2>
-            <h2>{selectedShelters.properties.lgbtFriendly}</h2>
-            <h2>{selectedShelters.properties.women_and_children}</h2>
+            <h2>{selectedShelters.name}</h2>
+            <h2>{selectedShelters.phone_number}</h2>
+            <h2>{selectedShelters.lgbtFriendly}</h2>
+            <h2>{selectedShelters.women_and_children}</h2>
           </div>
         </Popup>
       ) : null}
