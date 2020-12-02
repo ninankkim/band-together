@@ -47,7 +47,7 @@ export default function Map() {
     .then(data => {
       setDonationCenters(data)
     })
-  })
+  }, []);
 
   return (
     <ReactMapGL
@@ -83,9 +83,10 @@ export default function Map() {
         >
           <div>
             <h2>{selectedDonationCenters.name}</h2>
+            <h2>{selectedDonationCenters.address}</h2>
             <h2>{selectedDonationCenters.phone_number}</h2>
-            <h2>{selectedDonationCenters.lgbtFriendly}</h2>
-            <h2>{selectedDonationCenters.women_and_children}</h2>
+            <h2>{selectedDonationCenters.hours}</h2>
+            <h2>{selectedDonationCenters.category}</h2>
           </div>
         </Popup>
       ) : null}
@@ -116,9 +117,10 @@ export default function Map() {
         >
           <div>
             <h2>{selectedFoodPantries.name}</h2>
+            <h2>{selectedFoodPantries.address}</h2>
             <h2>{selectedFoodPantries.phone_number}</h2>
-            <h2>{selectedFoodPantries.lgbtFriendly}</h2>
-            <h2>{selectedFoodPantries.women_and_children}</h2>
+            <h2>{selectedFoodPantries.hours}</h2>
+            <h2>{selectedFoodPantries.church_affiliated}</h2>
           </div>
         </Popup>
       ) : null}
@@ -149,7 +151,9 @@ export default function Map() {
         >
           <div>
             <h2>{selectedShelters.name}</h2>
+            <h2>{selectedShelters.address}</h2>
             <h2>{selectedShelters.phone_number}</h2>
+            <h2>{selectedShelters.hours}</h2>
             <h2>{selectedShelters.lgbtFriendly}</h2>
             <h2>{selectedShelters.women_and_children}</h2>
           </div>
