@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { useState, useEffect } from 'react';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
