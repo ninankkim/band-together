@@ -20,7 +20,7 @@ module.exports = {
         latitude: 29.4129505,
         longitude: -95.2537941,
         phone_number: 2818248871,
-        hours: 'Unlisted',
+        hours: null,
         church_affiliated: false,
         createdAt: new Date(),
         updatedAt: new Date(),
