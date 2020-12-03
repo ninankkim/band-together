@@ -15,31 +15,28 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-
-
-
-
-export default function FindResourceScreen() {
+export default function FindResourceScreen(props) {
     const classes = useStyles();
     const [name, setName] = useState('')
     const [gender, setGender] = useState('')
     const [child, setChild] = useState('')
     const [ident, setIdent] = useState('')
-    const [pet, setPet] = useState('')
+
 
     const handleGender = (event) => {
+
         setGender(event.target.value);
     }
     const handleChild = (event) => {
+
         setChild(event.target.value);
     }
     const handleIdent = (event) => {
+
         setIdent(event.target.value);
     }
-    const handlePet = (event) => {
-        setPet(event.target.value);
-    }
     const handleName = (event) => {
+
         setName(event.target.value);
     }
     return (
@@ -49,11 +46,11 @@ export default function FindResourceScreen() {
 
             <h1>Looking for a specific shelter? Search the name. </h1>
             <form className={classes.root} noValidate autoComplete="off">
-                <TextField id="filled-basic" variant="filled" placeholder="Alison's Digs" onChange={handleName} />
+                <TextField id="filled-basic" variant="filled" onChange={handleName} />
 
                 <p></p>
                 <Fab variant="extended">
-                    <AddIcon className={classes.extendedIcon} />
+                    <AddIcon className={classes.extendedIcon}   />
                     Submit
                 </Fab>
             </form>
@@ -86,12 +83,16 @@ export default function FindResourceScreen() {
                     </RadioGroup>
                 </FormControl>
                 <p></p>
-                <Fab variant="extended">
-                    <AddIcon className={classes.extendedIcon} />
+                {/* <Fab variant="extended">
+                    <AddIcon className={classes.extendedIcon}  />
                     Submit
-                </Fab>
+                </Fab> */}
             </form>
-            <Map />
+            
+            <Map 
+            gender={gender} 
+            child={child}
+            ident={ident} />
         </div>
     )
 }
