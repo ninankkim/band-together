@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FormControl, FormLabel, FormControlLabel, Radio, RadioGroup, TextField } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
@@ -18,40 +18,47 @@ const useStyles = makeStyles((theme) => ({
 export default function FindResourceScreen(props) {
     const classes = useStyles();
     const [name, setName] = useState('')
-    const [gender, setGender] = useState('')
+    const [gender, setGender] = useState(null)
     const [ident, setIdent] = useState('')
-    const [shelters, setShelters] = useState('')
+    const [shelters, setShelters] = useState([])
+    useEffect (() => {
 
-
-    const handleGender = (event, gender) => {
-        setGender(event.target.value);
-        console.log("its here hopefully", gender)
         fetch('/api/v1/shelter')
-            .then(res => res.json())
-            .then(data => {
-                console.log("second pull", data)
-                console.log("its here hopefully2", gender)
+                .then(res => res.json())
+                .then(data => {
+                    console.log("shelter data", data)
+                    let newShelters = data
+                    if (gender !== null) {
+                        newShelters = data.filter(shelter => shelter.women_and_children === gender)
+                    }
+                    if (ident !== null) {
+                        newShelters = data.filter(shelter => shelter.lgbtFriendly === ident)
+                    }
+                    console.log("filtered shelter data", newShelters);
+                    setShelters(newShelters);
+    
+                })
+    },[gender, ident])
 
-                if (gender === true) {
-                    console.log("its true")
-                    const filterData =
-                        //if yes clicked then, do this
-                        data.filter(shelter => shelter.women_and_children === true)
-                    console.log("genderfilter", filterData)
-                    setShelters(filterData);
-                } else if
-                    (gender === false) {
-                    const menData =
-                        data.filter(shelter => shelter.women_and_children === false)
-                    console.log("men only!!!!!!!!!!", menData)
-                    setShelters(menData);
-                }
-            })
+
+    const handleGender = (event) => {
+        if (event.target.value === 'true') {
+            setGender(true)
+        } else if (event.target.value === 'false'){
+            setGender(false)
+        } else {
+            setGender(null)
+        }
     }
 
     const handleIdent = (event) => {
-
-        setIdent(event.target.value);
+        if (event.target.value === 'true') {
+            setIdent(true)
+        } else if (event.target.value === 'false'){
+            setIdent(false)
+        } else {
+            setIdent(null)
+        }
     }
     const handleName = (event) => {
 
@@ -79,17 +86,21 @@ export default function FindResourceScreen(props) {
             <form>
                 <FormControl className="formfield" component="fieldset">
                     <FormLabel component="legend">Women and Children Only?</FormLabel>
-                    <RadioGroup aria-label="gender" name="gender" onChange={handleGender}>
-                        <FormControlLabel value="true" control={<Radio />} label="true" />
-                        <FormControlLabel value="false" control={<Radio />} label="false" />
+                    <RadioGroup aria-label="gender" name="gender" onChange={handleGender} value={gender}>
+                        <FormControlLabel value={true} control={<Radio />} label="true" />
+                        <FormControlLabel value={false} control={<Radio />} label="false" />
+                        <FormControlLabel value={null} control={<Radio />} label="any" />
+
                     </RadioGroup>
                 </FormControl>
                 <p></p>
                 <FormControl className="formfield" component="fieldset">
                     <FormLabel component="legend">LGBTQ+ Friendly?</FormLabel>
-                    <RadioGroup aria-label="gender" name="lgbtq" onChange={handleIdent}>
-                        <FormControlLabel value="true" control={<Radio />} label="true" />
-                        <FormControlLabel value="false" control={<Radio />} label="false" />
+                    <RadioGroup aria-label="gender" name="lgbtq" onChange={handleIdent} value={ident}>
+                        <FormControlLabel value={true} control={<Radio />} label="true" />
+                        <FormControlLabel value={false} control={<Radio />} label="false" />
+                        <FormControlLabel value={null} control={<Radio />} label="any" />
+
                     </RadioGroup>
                 </FormControl>
                 <p></p>
@@ -97,6 +108,7 @@ export default function FindResourceScreen(props) {
 
             <Map
                 gender={gender}
+                shelters={shelters}
                 ident={ident}
                 name={name} />
         </div>
