@@ -19,18 +19,36 @@ export default function FindResourceScreen(props) {
     const classes = useStyles();
     const [name, setName] = useState('')
     const [gender, setGender] = useState('')
-    const [child, setChild] = useState('')
     const [ident, setIdent] = useState('')
+    const [shelters, setShelters] = useState('')
 
 
-    const handleGender = (event) => {
-
+    const handleGender = (event, gender) => {
         setGender(event.target.value);
-    }
-    const handleChild = (event) => {
+        console.log("its here hopefully", gender)
+        fetch('/api/v1/shelter')
+            .then(res => res.json())
+            .then(data => {
+                console.log("second pull", data)
+                console.log("its here hopefully2", gender)
 
-        setChild(event.target.value);
+                if (gender === true) {
+                    console.log("its true")
+                    const filterData =
+                        //if yes clicked then, do this
+                        data.filter(shelter => shelter.women_and_children === true)
+                    console.log("genderfilter", filterData)
+                    setShelters(filterData);
+                } else if
+                    (gender === false) {
+                    const menData =
+                        data.filter(shelter => shelter.women_and_children === false)
+                    console.log("men only!!!!!!!!!!", menData)
+                    setShelters(menData);
+                }
+            })
     }
+
     const handleIdent = (event) => {
 
         setIdent(event.target.value);
@@ -42,7 +60,7 @@ export default function FindResourceScreen(props) {
     return (
         <div>
 
-            <img src="images/findshelterbw.png"  border="5px solid black" alt="find shelter heading" className="responsive"></img>
+            <img src="images/findshelterbw.png" border="5px solid black" alt="find shelter heading" className="responsive"></img>
 
             <h1>Looking for a specific shelter? Search the name. </h1>
             <form className={classes.root} noValidate autoComplete="off">
@@ -50,7 +68,7 @@ export default function FindResourceScreen(props) {
 
                 <p></p>
                 <Fab variant="extended">
-                    <AddIcon className={classes.extendedIcon}   />
+                    <AddIcon className={classes.extendedIcon} />
                     Submit
                 </Fab>
             </form>
@@ -60,39 +78,27 @@ export default function FindResourceScreen(props) {
             <h1>Please enter more information about the shelter below!</h1>
             <form>
                 <FormControl className="formfield" component="fieldset">
-                    <FormLabel component="legend">Gender (can leave blank)</FormLabel>
+                    <FormLabel component="legend">Women and Children Only?</FormLabel>
                     <RadioGroup aria-label="gender" name="gender" onChange={handleGender}>
-                        <FormControlLabel value="female" control={<Radio />} label="Female" />
-                        <FormControlLabel value="male" control={<Radio />} label="Male" />
-                    </RadioGroup>
-                </FormControl>
-                <p></p>
-                <FormControl className="formfield" component="fieldset">
-                    <FormLabel component="legend">Bringing Your Child?</FormLabel>
-                    <RadioGroup aria-label="gender" name="child" onChange={handleChild}>
-                        <FormControlLabel value="yesChild" control={<Radio />} label="Yes" />
-                        <FormControlLabel value="noChild" control={<Radio />} label="No" />
+                        <FormControlLabel value="true" control={<Radio />} label="true" />
+                        <FormControlLabel value="false" control={<Radio />} label="false" />
                     </RadioGroup>
                 </FormControl>
                 <p></p>
                 <FormControl className="formfield" component="fieldset">
                     <FormLabel component="legend">LGBTQ+ Friendly?</FormLabel>
                     <RadioGroup aria-label="gender" name="lgbtq" onChange={handleIdent}>
-                        <FormControlLabel value="LGBTQFriendly" control={<Radio />} label="Yes" />
-                        <FormControlLabel value="notfriendly" control={<Radio />} label="No" />
+                        <FormControlLabel value="true" control={<Radio />} label="true" />
+                        <FormControlLabel value="false" control={<Radio />} label="false" />
                     </RadioGroup>
                 </FormControl>
                 <p></p>
-                {/* <Fab variant="extended">
-                    <AddIcon className={classes.extendedIcon}  />
-                    Submit
-                </Fab> */}
             </form>
-            
-            <Map 
-            gender={gender} 
-            child={child}
-            ident={ident} />
+
+            <Map
+                gender={gender}
+                ident={ident}
+                name={name} />
         </div>
     )
 }
