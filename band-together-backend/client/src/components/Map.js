@@ -7,7 +7,8 @@ import FoodIcon from '@material-ui/icons/Restaurant'
 import DonationCenter from '@material-ui/icons/ShoppingCart';
 import CustomCards from './CustomCards';
 
-export default function Map() {
+export default function Map(props) {
+  const { child, gender, ident } = props;
   const [shelters, setShelters] = useState([]);
   const [selectedShelters, setSelectedShelters] = useState(null);
 
@@ -31,8 +32,10 @@ export default function Map() {
       .then(res => res.json())
       .then(data => {
         setShelters(data);
+        //
       });
   }, []);
+
 
   useEffect(() => {
     fetch('/api/v1/foodpantry')
@@ -75,7 +78,7 @@ export default function Map() {
               e.preventDefault();
               setSelectedDonationCenters(donationCenter)
             }}
-         ></DonationCenter> </Marker>
+         ></DonationCenter> </Marker> 
         )
       })}
       {selectedDonationCenters ? (
@@ -96,7 +99,7 @@ export default function Map() {
         </Popup>
       ) : null}
 
-
+ 
       {foodPantries.map(foodPantry => {
         return (
           <Marker key={foodPantry.id}
@@ -145,6 +148,7 @@ export default function Map() {
             ></HomeIcon>
           </Marker>
         );
+        //filter through data with variable
       })}
       {selectedShelters ? (
         <Popup
