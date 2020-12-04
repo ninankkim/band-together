@@ -8,10 +8,9 @@ import DonationCenter from '@material-ui/icons/ShoppingCart';
 import CustomCards from './CustomCards';
 
 export default function Map(props) {
-  const { child, gender, ident, shelters } = props;
+  const { child, gender, ident, shelters, foodPantries } = props;
   const [selectedShelters, setSelectedShelters] = useState(null);
 
-  const [foodPantries, setFoodPantries] = useState([]);
   const [selectedFoodPantries, setSelectedFoodPantries] = useState(null)
 
   const [donationCenters, setDonationCenters] = useState([]);
@@ -28,19 +27,8 @@ export default function Map(props) {
   // componentDidMount
 
 
-          
 
 
-
-  useEffect(() => {
-    fetch('/api/v1/foodpantry')
-      .then(res => res.json())
-      .then(data => {
-
-
-        setFoodPantries(data)
-      });
-  }, []);
 
   useEffect(() => {
     fetch('/api/v1/donationcenter')

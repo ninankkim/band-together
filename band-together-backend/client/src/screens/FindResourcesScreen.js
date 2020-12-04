@@ -21,85 +21,118 @@ export default function FindResourceScreen(props) {
     const [gender, setGender] = useState(null)
     const [shelters, setShelters] = useState([])
     const [hoursAvailable, setHoursAvailable] = useState([])
+    const [foodPantries, setFoodPantries] = useState([]);
+    const [affiliated, setAffiliated] = useState(null)
 
-    useEffect (() => {
+
+    useEffect(() => {
 
         fetch('/api/v1/shelter')
-                .then(res => res.json())
-                .then(data => {
-                    console.log("shelter data", data)
-                    let newShelters = data
-                    if (gender !== null) {
-                        newShelters = data.filter(shelter => shelter.women_and_children === gender)
-                        setShelters(newShelters);
-                        console.log("filtered shelter data", newShelters);
+            .then(res => res.json())
+            .then(data => {
+                console.log("shelter data", data)
+                let newShelters = data
+                if (gender !== null) {
+                    newShelters = data.filter(shelter => shelter.women_and_children === gender)
+                    setShelters(newShelters);
+                    console.log("filtered shelter data", newShelters);
 
-                    }
-                    if (hoursAvailable !== null) {
-                        newShelters = data.filter(shelter => shelter.hoursAvailable === hoursAvailable)
-                        setShelters(newShelters);
-                        console.log("filtered shelter hours", newShelters);
-                    }
-                    
-    
-                })
-    },[gender, hoursAvailable])
+                } else {
+                    setShelters(data)
+                }
+
+
+            })
+    }, [gender])
 
 
     const handleGender = (event) => {
         if (event.target.value === "true") {
             setGender(true)
-        } else if (event.target.value === "false"){
+        } else if (event.target.value === "false") {
             setGender(false)
         } else {
             setGender(null)
         }
     }
 
-    const handleHoursAvailable = (event) => {
+
+    useEffect(() => {
+        fetch('/api/v1/foodpantry')
+            .then(res => res.json())
+            .then(data => {
+                console.log("food pantry data", data)
+                let newPantries = data
+                if (affiliated !== null) {
+                    newPantries = data.filter(pantry => pantry.church_affiliated === affiliated)
+                    setFoodPantries(newPantries);
+                    console.log("filtered food pantrydata", newPantries);
+                }  else {
+                    setFoodPantries(data)
+                }             
+
+
+                
+            })
+    }, [affiliated])
+
+    const handlePantries = (event) => {
         if (event.target.value === "true") {
-            setHoursAvailable(true)
+            setAffiliated(true)
         } else if (event.target.value === "false") {
-            setHoursAvailable(false)
+            setAffiliated(false)
         } else {
-            setHoursAvailable(null)
+            setAffiliated(null)
         }
     }
+        
     
+
+
     return (
         <div>
 
-            <img src="images/findshelterbw.png" border="5px solid black" alt="find shelter heading" className="responsive"></img>
+            <img src="images/findresource.png" border="5px solid black" alt="find shelter heading" className="responsive"></img>
 
 
             <h1>Please choose from the selections below.</h1>
             <form>
+            <h2>Shelter</h2>
                 <FormControl className="formfield" component="fieldset">
+                   
                     <FormLabel component="legend">Women and Children Only?</FormLabel>
                     <RadioGroup aria-label="gender" name="gender" onChange={handleGender} value={gender}>
-                        <FormControlLabel value={true} control={<Radio />} label="true" />
-                        <FormControlLabel value={false} control={<Radio />} label="false" />
-                        <FormControlLabel value={null} control={<Radio />} label="any" />
+                        <FormControlLabel value={true} control={<Radio />} label="Yes" />
+                        <FormControlLabel value={false} control={<Radio />} label="No" />
+                        <FormControlLabel value={null} control={<Radio />} label="No Preference" />
 
                     </RadioGroup>
                 </FormControl>
                 <p></p>
+
+                
+                    <h2>Food Pantry</h2>
                 <FormControl className="formfield" component="fieldset">
-                    <FormLabel component="legend">Show the hours?</FormLabel>
-                    <RadioGroup aria-label="hoursAvailable" name="hoursAvailable" onChange={handleHoursAvailable} value={hoursAvailable}>
-                        <FormControlLabel value={true} control={<Radio />} label="true" />
-                        <FormControlLabel value={false} control={<Radio />} label="false" />
-                        <FormControlLabel value={null} control={<Radio />} label="not important" />
+                    <FormLabel component="legend">Type of Affiliation</FormLabel>
+                    <RadioGroup aria-label="affiliated" name="affiliated" onChange={handlePantries} value={affiliated}>
+                        <FormControlLabel value={true} control={<Radio />} label="Religious Affiliation" />
+                        <FormControlLabel value={false} control={<Radio />} label="Non-Religious Affiliation" />
+                        <FormControlLabel value={null} control={<Radio />} label="No Preference" />
+
                     </RadioGroup>
                 </FormControl>
                 <p></p>
+                
             </form>
+            
 
             <Map
                 gender={gender}
                 shelters={shelters}
                 hoursAvailable={hoursAvailable}
-                name={name} />
+                name={name}
+                foodPantries={foodPantries}
+                />
         </div>
     )
 }
