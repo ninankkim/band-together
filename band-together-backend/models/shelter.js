@@ -19,6 +19,7 @@ module.exports = (sequelize, DataTypes) => {
       longitude: DataTypes.FLOAT,
       phone_number: DataTypes.TEXT,
       hours: DataTypes.TEXT,
+      hoursAvailable: DataTypes.BOOLEAN,
       lgbtFriendly: DataTypes.BOOLEAN,
       women_and_children: DataTypes.BOOLEAN,
     },

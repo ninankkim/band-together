@@ -20,6 +20,8 @@ router.post('/', (req, res) => {
     !req.body.address ||
     !req.body.latitude ||
     !req.body.longitude ||
+    !req.body.hours ||
+    !req.body.hoursAvailable ||
     !req.body.phone_number ||
     !req.body.lgbtFriendly ||
     !req.body.women_and_children
@@ -34,6 +36,8 @@ router.post('/', (req, res) => {
     address: req.body.address,
     latitude: req.body.latitude,
     longitude: req.body.longitude,
+    hours: req.body.hours,
+    hoursAvailable: req.body.hoursAvailable,
     phone_number: req.body.phone_number,
     lgbtFriendly: req.body.lgbtFriendly,
     women_and_children: req.body.women_and_children,
@@ -51,6 +55,8 @@ router.put('/:id', (req, res) => {
     !req.body.address ||
     !req.body.latitude ||
     !req.body.longitude ||
+    !req.body.hours ||
+    !req.body.hoursAvailable ||
     !req.body.phone_number ||
     !req.body.lgbtFriendly ||
     !req.body.women_and_children 
@@ -67,6 +73,8 @@ router.put('/:id', (req, res) => {
       address: req.body.address,
       latitude: req.body.latitude,
       longitude: req.body.longitude,
+      hours: req.body.hours,
+      hoursAvailable: req.body.hoursAvailable,
       phone_number: req.body.phone_number,
       lgbtFriendly: req.body.lgbtFriendly,
       women_and_children: req.body.women_and_children,

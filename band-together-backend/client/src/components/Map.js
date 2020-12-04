@@ -52,9 +52,7 @@ export default function Map(props) {
 
   return (
     <>
-      <CustomCards types='shelters'>
 
-      </CustomCards>
       <ReactMapGL
         {...viewport}
         let
