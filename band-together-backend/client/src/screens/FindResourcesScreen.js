@@ -92,7 +92,7 @@ export default function FindResourceScreen(props) {
     return (
         <div>
 
-            <img src="images/findshelterbw.png" border="5px solid black" alt="find shelter heading" className="responsive"></img>
+            <img src="images/findresource.png" border="5px solid black" alt="find shelter heading" className="responsive"></img>
 
 
             <h1>Please choose from the selections below.</h1>
