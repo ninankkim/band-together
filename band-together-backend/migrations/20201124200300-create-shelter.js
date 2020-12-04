@@ -26,6 +26,9 @@ module.exports = {
       hours: {
         type: Sequelize.TEXT,
       },
+      hoursAvailable: {
+        type: Sequelize.BOOLEAN,
+      },
       lgbtFriendly: {
         type: Sequelize.BOOLEAN,
       },
