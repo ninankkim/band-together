@@ -37,12 +37,9 @@ export default function FindResourceScreen(props) {
                     setShelters(newShelters);
                     console.log("filtered shelter data", newShelters);
 
+                } else {
+                    setShelters(data)
                 }
-                // if (hoursAvailable !== null) {
-                //     newShelters = data.filter(shelter => shelter.hoursAvailable === hoursAvailable)
-                //     setShelters(newShelters);
-                //     console.log("filtered shelter hours", newShelters);
-                // }
 
 
             })
@@ -59,15 +56,6 @@ export default function FindResourceScreen(props) {
         }
     }
 
-    // const handleHoursAvailable = (event) => {
-    //     if (event.target.value === "true") {
-    //         setHoursAvailable(true)
-    //     } else if (event.target.value === "false") {
-    //         setHoursAvailable(false)
-    //     } else {
-    //         setHoursAvailable(null)
-    //     }
-    // }
 
     useEffect(() => {
         fetch('/api/v1/foodpantry')
@@ -79,7 +67,9 @@ export default function FindResourceScreen(props) {
                     newPantries = data.filter(pantry => pantry.church_affiliated === affiliated)
                     setFoodPantries(newPantries);
                     console.log("filtered food pantrydata", newPantries);
-                }
+                }  else {
+                    setFoodPantries(data)
+                }             
 
 
                 
