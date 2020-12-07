@@ -58,20 +58,19 @@ html {
   text-align: center;
   }
   footer {
-  position: absolute;
+  position: relative;
   left: 0;
   bottom: 0;
-  height: 100px;
+  height: 45px;
   width: 100%;
   color:#FFFFFF; 
   background-color: black;
   font-size:1.5em;
   text-align: center;
-  line-height:100px;
+  line-height: 50px;
   }
 
 .MuiButton-root {
-  color: pink !important;
   background-color: #4f939f !important;
 }
 
