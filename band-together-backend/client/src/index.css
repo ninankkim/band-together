@@ -46,3 +46,17 @@ html {
   background-color: #4f939f !important;
 }
 
+.contcards {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+.button {
+display: flex;
+text-align: center;
+}
+
+
+
+
+
