@@ -22,7 +22,7 @@ body {
 .image-content {
   display: flex;
   justify-content: space-between;
-  /* margin: 20px; */
+  margin: 20px;
 
 }
 
@@ -53,8 +53,8 @@ html {
   
   }
   .content { 
-  /* padding: 15px;  */
-  /* box-sizing: border-box; */
+  padding: 15px;
+  box-sizing: border-box;
   text-align: center;
   }
   footer {
