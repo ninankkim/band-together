@@ -11,7 +11,7 @@
 
 .MuiTypography-root{
     font-family: 'Steinberg' !important;
-    color: white;
+    color: black;
 
 }
 
@@ -34,7 +34,7 @@ h2 {
 
 h3 {
     font-family: 'Steinberg' !important;
-    color: white !important;
+    color: black !important;
 }
 
 form {
