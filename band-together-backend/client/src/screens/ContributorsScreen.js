@@ -5,21 +5,26 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { TextareaAutosize } from '@material-ui/core';
 
 const useStyles = makeStyles({
     root: {
         minWidth: 250,
+        margin: "0 auto"
+       
     },
     bullet: {
         display: 'inline-block',
         margin: '0 1px',
         transform: 'scale(0.8)',
+        
     },
     title: {
         fontSize: 14,
     },
     pos: {
-        width: "100vw",
+        width: "60vw",
+       
 
     },
 });
