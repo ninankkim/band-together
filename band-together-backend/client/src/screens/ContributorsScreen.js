@@ -3,7 +3,8 @@ import React from 'react'
 export default function ContributorsScreen() {
     return (
         <div>
-            <h1>wusssup</h1>
+            
+            <img src="images/contributor1.png" className="responsive"></img>
         </div>
     )
 }

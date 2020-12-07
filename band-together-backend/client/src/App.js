@@ -22,6 +22,7 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import AddShelter from './screens/AddShelter';
 import AddFood from './screens/AddFood';
 import AddDonation from './screens/AddDonation';
+import puptributorScreen from './screens/puptributorScreen';
 
 const useStyles = makeStyles({
   list: {
@@ -119,6 +120,7 @@ function App() {
               <Route path="/addshelter" component={AddShelter}></Route>
               <Route path="/addfood" component={AddFood}></Route>
               <Route path="/adddonation" component={AddDonation}></Route>
+              <Route path="/puptributors" component={puptributorScreen}></Route>
             </Switch>
           </>
         ))}
