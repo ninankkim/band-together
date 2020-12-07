@@ -64,79 +64,79 @@ export default function Map(props) {
               ></DonationCenter> </Marker>
           )
         })}
-        {selectedDonationCenters ? (
-          <Popup
-            latitude={selectedDonationCenters.latitude}
-            longitude={selectedDonationCenters.longitude}
-            onClose={() => {
-              setSelectedDonationCenters(null);
-            }}
-          >
-            <div>
-              <h2>{selectedDonationCenters.name}</h2>
-              <h2>{selectedDonationCenters.address}</h2>
-              <h2>{selectedDonationCenters.phone_number}</h2>
-              <h2>{selectedDonationCenters.hours}</h2>
-              <h2>{selectedDonationCenters.category}</h2>
-            </div>
-          </Popup>
-        ) : null}
 
 
         {foodPantries.map(foodPantry => {
           return (
             <Marker key={foodPantry.id}
-              latitude={foodPantry.latitude}
-              longitude={foodPantry.longitude}
+            latitude={foodPantry.latitude}
+            longitude={foodPantry.longitude}
             >
               <FoodIcon
                 onClick={e => {
                   e.preventDefault();
                   setSelectedFoodPantries(foodPantry)
                 }}
-              ></FoodIcon>
+                ></FoodIcon>
             </Marker>
           )
         })}
-        {selectedFoodPantries ? (
-          <Popup
-            latitude={selectedFoodPantries.latitude}
-            longitude={selectedFoodPantries.longitude}
-            onClose={() => {
-              setSelectedFoodPantries(null);
-            }}
-          >
-            <div>
-              <h2>{selectedFoodPantries.name}</h2>
-              <h2>{selectedFoodPantries.address}</h2>
-              <h2>{selectedFoodPantries.phone_number}</h2>
-              <h2>{selectedFoodPantries.hours}</h2>
-              <h2>{selectedFoodPantries.church_affiliated}</h2>
-            </div>
-          </Popup>
-        ) : null}
 
         {shelters.map(shelter => {
           return (
             <Marker
-              key={shelter.id}
-              latitude={shelter.latitude}
-              longitude={shelter.longitude}
+            key={shelter.id}
+            latitude={shelter.latitude}
+            longitude={shelter.longitude}
             >
               <HomeIcon
                 onClick={e => {
                   e.preventDefault();
                   setSelectedShelters(shelter);
                 }}
-              ></HomeIcon>
+                ></HomeIcon>
             </Marker>
           );
           //filter through data with variable
         })}
+                                    {selectedFoodPantries ? (
+                                      <Popup
+                                      latitude={selectedFoodPantries.latitude}
+                                      longitude={selectedFoodPantries.longitude}
+                                      onClose={() => {
+                                        setSelectedFoodPantries(null);
+                                      }}
+                                      >
+                                        <div>
+                                          <h2>{selectedFoodPantries.name}</h2>
+                                          <h2>{selectedFoodPantries.address}</h2>
+                                          <h2>{selectedFoodPantries.phone_number}</h2>
+                                          <h2>{selectedFoodPantries.hours}</h2>
+                                          <h2>{selectedFoodPantries.church_affiliated}</h2>
+                                        </div>
+                                      </Popup>
+                                    ) : null}
+              {selectedDonationCenters ? (
+                <Popup
+                  latitude={selectedDonationCenters.latitude}
+                  longitude={selectedDonationCenters.longitude}
+                  onClose={() => {
+                    setSelectedDonationCenters(null);
+                  }}
+                >
+                  <div>
+                    <h2>{selectedDonationCenters.name}</h2>
+                    <h2>{selectedDonationCenters.address}</h2>
+                    <h2>{selectedDonationCenters.phone_number}</h2>
+                    <h2>{selectedDonationCenters.hours}</h2>
+                    <h2>{selectedDonationCenters.category}</h2>
+                  </div>
+                </Popup>
+              ) : null}
         {selectedShelters ? (
           <Popup
-            latitude={selectedShelters.latitude}
-            longitude={selectedShelters.longitude}
+          latitude={selectedShelters.latitude}
+          longitude={selectedShelters.longitude}
             onClose={() => {
               setSelectedShelters(null);
             }}
