@@ -16,6 +16,7 @@
 
 .MuiFormLabel-root {
     font-family: 'Comfortaa-Regular' !important;
+    color: white !important;
 }
 
 h1 {
@@ -39,3 +40,4 @@ body {
 path {
     color: black !important;
 }
+

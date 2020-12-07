@@ -17,8 +17,8 @@ export default function Map(props) {
   const [selectedDonationCenters, setSelectedDonationCenters] = useState(null);
 
   const [viewport, setViewport] = useState({
-    width: '50vw',
-    height: '50vh',
+    width: '100%',
+    height: '70vh',
     latitude: 29.7589382,
     longitude: -95.3676974,
     zoom: 8,
@@ -39,11 +39,11 @@ export default function Map(props) {
   }, []);
 
   return (
-    <>
+    <div>
 
       <ReactMapGL
         {...viewport}
-        let
+        style={{width:'100%', margin: '0 auto'}}
         mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
         mapStyle='mapbox://styles/bargavi-dev/cki67zptc3d5o19try3pjc9fh'
         onViewportChange={viewport => {
@@ -152,6 +152,6 @@ export default function Map(props) {
           </Popup>
         ) : null}
       </ReactMapGL>
-    </>
+    </div>
   );
 }
