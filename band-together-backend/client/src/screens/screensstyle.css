@@ -9,8 +9,9 @@
     /*credit to https://www.dafont.com/type-wrong.font */  
 }
 
-.MuiTypography-body1{
+.MuiTypography-root{
     font-family: 'Steinberg' !important;
+    color: white;
 
 }
 
@@ -22,10 +23,18 @@
 h1 {
     font-family: 'Steinberg' !important;
     text-align: center !important;
+    color: white !important;
+    
 }
 
 h2 {
     font-family: 'Steinberg' !important;
+    
+}
+
+h3 {
+    font-family: 'Steinberg' !important;
+    color: white !important;
 }
 
 form {
@@ -33,11 +42,7 @@ form {
     text-align: center !important;
 }
 
-body {
-    color: white !important;
-}
-
-path {
+/* path {
     color: black !important;
-}
+} */
 
