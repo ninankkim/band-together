@@ -4,37 +4,8 @@ body {
   height: 100%;
   width: 100%;
   background-color: #4f939f;
-
 }
 
-.component-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  min-width: 50px;
-}
-
-.about-image {
-  width: 500px;
-  padding-right: 20px;
-}
-
-.image-content {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px;
-
-}
-
-.about-text1 {
-  width: 300px;
-  padding-right: 50px;
-}
-
-.about-text2 {
-  width: 300px;
-  padding-left: 50px;
-}
 
 .logo {
   width: 100vw;
@@ -58,19 +29,20 @@ html {
   text-align: center;
   }
   footer {
-  position: relative;
+  position: absolute;
   left: 0;
   bottom: 0;
-  height: 45px;
+  height: 100px;
   width: 100%;
   color:#FFFFFF; 
   background-color: black;
   font-size:1.5em;
   text-align: center;
-  line-height: 50px;
+  line-height:100px;
   }
 
 .MuiButton-root {
+  color: pink !important;
   background-color: #4f939f !important;
 }
 

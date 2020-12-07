@@ -98,7 +98,7 @@ export default function FindResourceScreen(props) {
 
             <h1>Please choose from the selections below</h1>
             <form>
-            <h2>Shelter:</h2>
+            <h3>Shelter:</h3>
                 <FormControl className="formfield" component="fieldset">
                     <FormLabel component="legend">Women and Children Only?</FormLabel>
                     <RadioGroup aria-label="gender" name="gender" onChange={handleGender} value={gender}>
@@ -111,7 +111,7 @@ export default function FindResourceScreen(props) {
                 <p></p>
 
                 
-                    <h2>Food Pantry:</h2>
+                    <h3>Food Pantry:</h3>
                 <FormControl className="formfield" component="fieldset">
                     <FormLabel component="legend">Type of Affiliation?</FormLabel>
                     <RadioGroup aria-label="affiliated" name="affiliated" onChange={handlePantries} value={affiliated}>
