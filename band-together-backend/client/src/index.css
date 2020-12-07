@@ -3,7 +3,7 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
-  background-color: white;
+  background-color: #4f939f;
 
 }
 
@@ -52,13 +52,8 @@ html {
   min-height: 100%;
   
   }
-  body {
-  margin: 0 0 100px; 
-  font-family: sans-serif;
-  padding: 0;
-  }
   .content { 
-  padding: 15px; 
+  padding: 15px;
   box-sizing: border-box;
   text-align: center;
   }
@@ -75,5 +70,8 @@ html {
   line-height:100px;
   }
 
-
+.MuiButton-root {
+  color: pink !important;
+  background-color: #4f939f !important;
+}
 

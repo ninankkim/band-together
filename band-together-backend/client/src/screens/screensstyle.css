@@ -1,0 +1,41 @@
+@font-face {    
+    font-family: 'Steinberg';    
+    src: url('../components/Steinberg.ttf');  
+    /*credit to https://www.dafont.com/type-wrong.font */  
+}
+@font-face {    
+    font-family: 'Comfortaa-Regular';    
+    src: url('../components/Comfortaa-Regular.ttf');  
+    /*credit to https://www.dafont.com/type-wrong.font */  
+}
+
+.MuiTypography-body1{
+    font-family: 'Steinberg' !important;
+
+}
+
+.MuiFormLabel-root {
+    font-family: 'Comfortaa-Regular' !important;
+}
+
+h1 {
+    font-family: 'Steinberg' !important;
+    text-align: center !important;
+}
+
+h2 {
+    font-family: 'Steinberg' !important;
+}
+
+form {
+    padding-left: 30px !important;
+    text-align: center !important;
+}
+
+body {
+    color: white !important;
+}
+
+path {
+    color: black !important;
+}
