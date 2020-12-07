@@ -29,10 +29,10 @@ html {
   text-align: center;
   }
   footer {
-  position: absolute;
+  position: relative;
   left: 0;
   bottom: 0;
-  height: 100px;
+  height: 45px;
   width: 100%;
   color:#FFFFFF; 
   background-color: black;
