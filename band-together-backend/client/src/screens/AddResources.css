@@ -1,0 +1,37 @@
+/* CSS by Kate, important needed to roll over stylesheet */
+
+@font-face {    
+    font-family: 'Steinberg';    
+    src: url('../components/Steinberg.ttf');  
+    /*credit to https://www.dafont.com/type-wrong.font */  
+}
+@font-face {    
+    font-family: 'Comfortaa-Regular';    
+    src: url('../components/Comfortaa-Regular.ttf');  
+    /*credit to https://www.dafont.com/type-wrong.font */  
+}
+#container {
+    display: flex !important;
+    justify-content: center;
+    padding: 3%;
+}
+.choose{
+    background-color: pink !important;
+    font-family: 'Steinberg' !important;
+    color: white !important;
+}
+.choose:hover{
+    background-color: yellow !important;
+    font-family: 'Comfortaa-Regular' !important;
+    color: black !important;
+}
+.chose {
+    background-color: yellow !important;
+    font-family: 'Steinberg' !important;
+    color: black !important
+}
+.chose:hover{
+    background-color: pink !important;
+    font-family: 'Comfortaa-Regular' !important;
+    color: white !important;
+}

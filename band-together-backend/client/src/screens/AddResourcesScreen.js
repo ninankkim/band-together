@@ -1,4 +1,5 @@
 import React from 'react';
+import './AddResources.css'
 import AddShelter from './AddShelter';
 import AddFood from './AddFood';
 import AddDonation from './AddDonation';
@@ -19,11 +20,10 @@ export default function AddResourcesScreen() {
     const classes = useStyles();
     return (
         <div>
-            <img src="images/katherine.png" className="responsive"></img>
-            <div className={classes.root}>
-    <Button variant="outlined" component={Link} to="/addshelter">Add Shelter</Button>
-    <Button variant="outlined" component={Link} to="/addfood">Add Food</Button>
-    <Button variant="outlined" component={Link} to="/adddonation">Add Donation</Button>
+            <div id='container' className={classes.root}>
+    <Button className='choose' variant="outlined" component={Link} to="/addshelter">Add Shelter</Button>
+    <Button className = 'chose' variant="outlined" component={Link} to="/addfood">Add Food Pantry</Button>
+    <Button className = 'choose' variant="outlined" component={Link} to="/adddonation">Add Donation Center</Button>
 
             </div>
         <Switch>

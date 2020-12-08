@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { FormControl, FormLabel, FormControlLabel, Radio, RadioGroup, TextField } from '@material-ui/core';
+import { FormControl, FormLabel, FormControlLabel, Radio, RadioGroup, TextField, Checkbox } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
+import './AddDonations.css'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -40,40 +41,32 @@ export default function AddDonation() {
     return (
         <div>
             <img src="images/addshelterbwd.png"  border="5px solid black" alt="find shelter heading" className="responsive"></img>
-            <h3>What's The Shelter Called?</h3>
+            <h3>What's The Donation Center Called?</h3>
             <form className={classes.root} noValidate autoComplete="off">
-            <TextField id="filled-basic" variant="filled" placeholder="Alison's Digs" onChange={handleName} />
-            <h3>What's The Phone Number for the Shelter?</h3>
+            <TextField id="filled-basic" variant="filled" placeholder="BestWill" onChange={handleName} />
+            </form>
+            <h3>What's The Phone Number for the Donation Center?</h3>
+            <form className={classes.root} noValidate autoComplete="off">
             <TextField id="filled-basic" variant="filled" placeholder="1-800-234-5678" onChange={handleName} />
-            <h3>What's The Address for the Shelter?</h3>
-                <TextField id="filled-basic" variant="filled" placeholder="789 Rainbow Drive" onChange={handleName} />
+            </form>
+            <h3>What's The Address for the Donation Center?</h3>
+            <form className={classes.root} noValidate autoComplete="off">
+            <TextField id="filled-basic" variant="filled" placeholder="789 Rainbow Drive" onChange={handleName} />
             </form>
 
-            <h1>Let us know more about the shelter you would like to add!</h1>
+            <h1>Let us know more about the donation center you would like to add!</h1>
             <form>
             <FormControl className="formfield" component="fieldset">
                     <FormLabel component="legend">Which gender does this shelter accept?</FormLabel>
                     <RadioGroup aria-label="gender" name="gender" onChange={handleGender}>
-                        <FormControlLabel value="female" control={<Radio />} label="Female" />
-                        <FormControlLabel value="male" control={<Radio />} label="Male" />
+                        <FormControlLabel value="Clothes" control={<Checkbox />} label="Clothes" />
+                        <FormControlLabel value="Furniture" control={<Checkbox />} label="Furniture" />
+                        <FormControlLabel value="Shoes" control={<Checkbox />} label="Shoes" />
+                        <FormControlLabel value="Kitchen Supplies" control={<Checkbox />} label="Kitchen Supplies" />
+                        <FormControlLabel value="All" control={<Checkbox />} label="All" />
                     </RadioGroup>
                 </FormControl>
                 <p></p>
-            <FormControl className="formfield" component="fieldset">
-                    <FormLabel component="legend">Does the shelter allow children?</FormLabel>
-                    <RadioGroup aria-label="gender" name="child" onChange={handleChild}>
-                        <FormControlLabel value="yesChild" control={<Radio />} label="Yes" />
-                        <FormControlLabel value="noChild" control={<Radio />} label="No" />
-                    </RadioGroup>
-                </FormControl>
-                <p></p>
-                <FormControl className="formfield" component="fieldset">
-                    <FormLabel component="legend">Is it LGBTQ+ Friendly?</FormLabel>
-                    <RadioGroup aria-label="gender" name="lgbtq" onChange={handleIdent}>
-                        <FormControlLabel value="LGBTQFriendly" control={<Radio />} label="Yes" />
-                        <FormControlLabel value="notfriendly" control={<Radio />} label="No" />
-                    </RadioGroup>
-                </FormControl>
 
                 <p></p>
                 <Fab variant="extended">
