@@ -27,3 +27,4 @@ We manually created a database of resources relevant to homeless populations in 
 ![](imagesforproject/bandtogether.png)
 ![](imagesforproject/homepage.png)
 ![](imagesforproject/resources.png)
+![](imagesforproject/map.png)
