@@ -22,8 +22,8 @@ export default function AddResourcesScreen() {
         <div>
             <div id='container' className={classes.root}>
     <Button className='choose' variant="outlined" component={Link} to="/addshelter">Add Shelter</Button>
-    <Button className = 'chose' variant="outlined" component={Link} to="/addfood">Add Food</Button>
-    <Button className = 'choose' variant="outlined" component={Link} to="/adddonation">Add Donation</Button>
+    <Button className = 'chose' variant="outlined" component={Link} to="/addfood">Add Food Pantry</Button>
+    <Button className = 'choose' variant="outlined" component={Link} to="/adddonation">Add Donation Center</Button>
 
             </div>
         <Switch>
