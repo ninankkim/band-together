@@ -19,6 +19,7 @@ export default function AddResourcesScreen() {
     const classes = useStyles();
     return (
         <div>
+            <img src="images/katherine.png" className="responsive"></img>
             <div className={classes.root}>
     <Button variant="outlined" component={Link} to="/addshelter">Add Shelter</Button>
     <Button variant="outlined" component={Link} to="/addfood">Add Food</Button>
