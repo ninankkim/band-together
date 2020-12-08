@@ -94,7 +94,7 @@ export default function ContributorsScreen() {
 
                         <Link component={Button} href="https://www.linkedin.com/in/bargavi-kanneganti-92a039149/">LinkedIn </Link>
                         <Link component={Button} href="https://github.com/bargavi-dev">GitHub </Link>
-                        <Link component={Button} href="www.bargavi.dev">Portfolio </Link>
+                        <Link component={Button} href="https://www.bargavi.dev">Portfolio </Link>
 
 
                     </CardContent>
