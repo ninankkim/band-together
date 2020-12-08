@@ -23,3 +23,7 @@ The front-end was responsible for creating the routes and screens that the user 
 
 Back-End:<br>
 We manually created a database of resources relevant to homeless populations in the Houston area after finding no premade APIs that covered the necessary data. Using Sequelize and PostgreSQL, tables on homless shelters, donation centers, and food pantries were constructed with attendant data like hours of service, phone number, and population requirements (as some shelters only cater to women and children, while some shelters cater exclusively to men). These tables were used to create markers on our Mapbox API and to create a filter function that allows users to sort the resources they're searching for by different criterion - ie populations served. Additionally, we enabled the Service Worker embedded in React to make Band-Together a Progressive Web App, which will allow users to access the site and cache relevant data without reliable Internet.
+
+![](imagesforproject/bandtogether.png)
+![](imagesforproject/homepage.png)
+![](imagesforproject/resources.png)
