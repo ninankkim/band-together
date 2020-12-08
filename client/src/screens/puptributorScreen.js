@@ -3,6 +3,7 @@ import React from 'react'
 export default function puptributorScreen() {
     return (
         <div>
+
             <img src="images/manju.png" className="responsive" padding-top="0px"></img>
             <img src="images/nelson.png" className="responsive" padding-top="0px"></img>
             <img src="images/sadie.png" className="responsive" padding-top="0px"></img>
