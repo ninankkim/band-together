@@ -10,36 +10,37 @@
 }
 
 .MuiTypography-root{
-    font-family: 'Steinberg' !important;
-    color: black;
+    font-family: 'Steinberg';
+    color: black !important;
 
 }
 
 .MuiFormLabel-root {
-    font-family: 'Comfortaa-Regular' !important;
+    font-family: 'Comfortaa-Regular';
     color: white !important;
 }
 
 h1 {
-    font-family: 'Steinberg' !important;
-    text-align: center !important;
-    color: white !important;
+    font-family: 'Steinberg';
+    text-align: center;
+    color: white;
     
 }
 
 h2 {
-    font-family: 'Steinberg' !important;
+    font-family: 'Steinberg';
     
 }
 
 h3 {
-    font-family: 'Steinberg' !important;
-    color: black !important;
+    font-family: 'Steinberg';
+    color: black;
+    text-align: center;
 }
 
 form {
-    padding-left: 30px !important;
-    text-align: center !important;
+    padding-left: 30px;
+    text-align: center;
 }
 
 /* path {

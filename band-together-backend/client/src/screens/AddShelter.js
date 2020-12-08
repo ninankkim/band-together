@@ -3,6 +3,7 @@ import { FormControl, FormLabel, FormControlLabel, Radio, RadioGroup, TextField 
 import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
+import './AddShelter.css'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -19,7 +20,6 @@ export default function AddShelter() {
     const [gender, setGender] = useState('')
     const [child, setChild] = useState('')
     const [ident, setIdent] = useState('')
-    const [pet, setPet] = useState('')
 
     const handleGender = (event) => {
         setGender(event.target.value);
@@ -30,9 +30,6 @@ export default function AddShelter() {
     const handleIdent = (event) => {
         setIdent(event.target.value);
     }
-    const handlePet = (event) => {
-        setPet(event.target.value);
-    }
     const handleName = (event) => {
         setName(event.target.value);
     }
@@ -42,17 +39,19 @@ export default function AddShelter() {
             <img src="images/addshelterbwd.png"  border="5px solid black" alt="find shelter heading" className="responsive"></img>
             <h3>What's The Shelter Called?</h3>
             <form className={classes.root} noValidate autoComplete="off">
-            <TextField id="filled-basic" variant="filled" placeholder="Alison's Digs" onChange={handleName} />
+            <TextField id="filled-basic" variant="filled" placeholder="Sheltering Arms" onChange={handleName} /></form>
             <h3>What's The Phone Number for the Shelter?</h3>
-            <TextField id="filled-basic" variant="filled" placeholder="1-800-234-5678" onChange={handleName} />
+            <form className={classes.root} noValidate autoComplete='off'> 
+            <TextField id="filled-basic" variant="filled" placeholder="1-800-234-5678" onChange={handleName} /></form>
             <h3>What's The Address for the Shelter?</h3>
+            <form className={classes.root} noValidate autoComplete='off'>
                 <TextField id="filled-basic" variant="filled" placeholder="789 Rainbow Drive" onChange={handleName} />
             </form>
 
             <h1>Let us know more about the shelter you would like to add!</h1>
             <form>
             <FormControl className="formfield" component="fieldset">
-                    <FormLabel component="legend">Which gender does this shelter accept?</FormLabel>
+                    <FormLabel component="legend">Which genders does this shelter accept?</FormLabel>
                     <RadioGroup aria-label="gender" name="gender" onChange={handleGender}>
                         <FormControlLabel value="female" control={<Radio />} label="Female" />
                         <FormControlLabel value="male" control={<Radio />} label="Male" />
