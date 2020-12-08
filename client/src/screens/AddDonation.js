@@ -57,7 +57,7 @@ export default function AddDonation() {
             <h1>Let us know more about the donation center you would like to add!</h1>
             <form>
             <FormControl className="formfield" component="fieldset">
-                    <FormLabel component="legend">Which gender does this shelter accept?</FormLabel>
+                    <FormLabel component="legend">Which items does this donation center accept?</FormLabel>
                     <RadioGroup aria-label="gender" name="gender" onChange={handleGender}>
                         <FormControlLabel value="Clothes" control={<Checkbox />} label="Clothes" />
                         <FormControlLabel value="Furniture" control={<Checkbox />} label="Furniture" />

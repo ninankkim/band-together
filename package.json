@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "db:migrate": "npx sequelize-cli db:migrate",
+    "db:migrate": "npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
+    "postinstall": "cd client && npm install && npm run build",
     "dev": "nodemon app.js",
     "katestartscript": "NODE_ENV=production DATABASE_URL=postgres://katherine:katherine@localhost:5432/bandtogether nodemon app.js",
     "db:reset": "npx sequelize-cli db:drop; npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all"
