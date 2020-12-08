@@ -39,7 +39,7 @@ export default function ContributorsScreen() {
         <div>
             
 
-            
+            <img src="images/katherine.png" className="responsive"></img>
             <div className="contcards">
                 <Card className={classes.root}>
                     <CardContent>

@@ -40,7 +40,8 @@ export default function AddFood() {
 
     return (
         <div>
-            <img src="images/addshelterbwd.png"  border="5px solid black" alt="find shelter heading" className="responsive"></img>
+
+            <img src="images/foodpant.png"  border="5px solid black" alt="find shelter heading" className="responsive"></img>
             <h3>What's The Food Pantry Called?</h3>
             <form className={classes.root} noValidate autoComplete="off">
             <TextField id="filled-basic" variant="filled" placeholder="Free Eats" onChange={handleName} />
