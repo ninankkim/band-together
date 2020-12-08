@@ -40,7 +40,7 @@ export default function AddDonation() {
 
     return (
         <div>
-            <img src="images/addshelterbwd.png"  border="5px solid black" alt="find shelter heading" className="responsive"></img>
+            <img src="images/donate.png"  border="5px solid black" alt="find shelter heading" className="responsive"></img>
             <h3>What's The Donation Center Called?</h3>
             <form className={classes.root} noValidate autoComplete="off">
             <TextField id="filled-basic" variant="filled" placeholder="BestWill" onChange={handleName} />

@@ -19,6 +19,8 @@ const useStyles = makeStyles((theme) => ({
 export default function AddResourcesScreen() {
     const classes = useStyles();
     return (
+        <>
+        <img src="images/addres.png" border="5px solid black" className="responsive"></img>
         <div>
             <div id='container' className={classes.root}>
     <Button className='choose' variant="outlined" component={Link} to="/addshelter">Add Shelter</Button>
@@ -32,6 +34,7 @@ export default function AddResourcesScreen() {
         <Route path="/adddonation" component={AddDonation}></Route>
         </Switch>
         </div>
+        </>
     )
 }
 
