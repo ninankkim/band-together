@@ -1,7 +1,7 @@
 # Band-Together
 
-Application Website: https://band-together-application.herokuapp.com/
-Service Message: The website is deployed using Heroku and takes several minutes to "wake up" the website on first load. 
+Application Website: https://band-together-application.herokuapp.com/ <br>
+- The website is deployed using Heroku and can take a few minutes to start the website on first load. 
 
 ![](imagesforproject/bandtogether.png)
 ## Contributors: 
