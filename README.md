@@ -32,5 +32,14 @@ The front-end was responsible for creating the routes and screens that the user 
 ## Back-End:<br>
 We manually created a database of resources relevant to homeless populations in the Houston area after finding no premade APIs that covered the necessary data. Using Sequelize and PostgreSQL, tables on homless shelters, donation centers, and food pantries were constructed with attendant data like hours of service, phone number, and population requirements (as some shelters only cater to women and children, while some shelters cater exclusively to men). These tables were used to create markers on our Mapbox API and to create a filter function that allows users to sort the resources they're searching for by different criterion - ie populations served. Additionally, we enabled the Service Worker embedded in React to make Band-Together a Progressive Web App, which will allow users to access the site and cache relevant data without reliable Internet.
 
-# Development Guidelines:
+# Development Guidelines:<br>
+In case anyone would like to run this code, first clone the link onto your terminal and then open via VS CODE. <br>
+From there, on your terminal run: <br>
+- $ npm install (The npm install will download any dependencies that you'll need) <br>
+- $ npm run db:migrate (The migration will run your backend and database, ensure you have postgresSQL and is running) <br>
+
+Once you've successfully installed and ran the migrations, you should cd into the backend files and the client folder. <br>
+After you've done that and opened up two zsh terminals:
+- $ npm start (It will help you run the backend and the front end)
+
 
